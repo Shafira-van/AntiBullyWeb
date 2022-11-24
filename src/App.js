@@ -7,9 +7,9 @@ import Artikel from "./components/Artikel";
 import Home from './components/Home';
 import ArtikelUser from "./pages/ArtikelUser";
 import HomeUser from './pages/HomeUser'
-import ArtikelPsikologi from "./pages/ArtikelPsikologi";
+import ArtikelPsikologi from "./pages/ArtikelPsikolog";
 import Diskusi from "./components/Diskusi";
-import Psikologi from "./components/Psikologi";
+import Psikolog from "./components/Psikolog";
 import Faq from "./components/Faq";
 import DetailArtikel from "./components/DetailArtikel";
 
@@ -21,11 +21,10 @@ function App() {
         <Route path="/" element={<HomeUser />} />
         <Route path="/artikel" element={<ArtikelUser />} /> 
         <Route path="/detailartikel/:judul" element={<DetailArtikel />} />
-        <Route path="/komunitas" element={<ArtikelPsikologi />} />
+        {/* <Route path="/komunitas" element={} /> */}
         <Route path="/diskusi" element={<Diskusi />} />
-        <Route path="/psikologi" element={<Psikologi />} />
+        <Route path="/psikolog" element={<Psikolog />} />
         <Route path="/faq" element={<Faq/> } />
-        
       </Routes>
       <Footer />
     </div>
