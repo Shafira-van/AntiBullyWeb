@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Psikologi() {
+function Psikolog() {
   return (
     <div className="kontenKomponen">
-      <div>Psikologi</div>
+      <div>Psikolog</div>
     </div>
   )
 }
 
-export default Psikologi
+export default Psikolog

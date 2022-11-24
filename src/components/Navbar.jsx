@@ -62,7 +62,7 @@ function Navbar() {
         </div>
         <div className="btn-group">
           <img
-            src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/LOGO.gif"
+            src="https://assets.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png?t=o&v=770"
             alt=""
           />
 
