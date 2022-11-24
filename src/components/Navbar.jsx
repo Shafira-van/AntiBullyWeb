@@ -37,7 +37,7 @@ function Navbar() {
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink to="/psikologi" className="nav-link" href="#">
+                <CustomLink to="/psikolog" className="nav-link" href="#">
                   Psikolog
                 </CustomLink>
               </li>
