@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar'
 function HomePsikolog() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Home />
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

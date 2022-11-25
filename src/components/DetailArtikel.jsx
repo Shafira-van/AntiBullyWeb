@@ -2,9 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 function DetailArtikel() {
-
-  const { id } = useParams()
-  console.log(id);
+  const { id } = useParams();
+  // console.log(id);
   const detailArtikel = [
     {
       id: 1,
@@ -22,23 +21,19 @@ function DetailArtikel() {
   ];
   return (
     <div>
-      {
-
-        detailArtikel.filter((el) => el.id === +id).map((el) => {
+      {detailArtikel
+        .filter((el) => el.id === +id)
+        .map((el) => {
           return (
-            < div className="detailArtikel" key={el.id}>
+            <div className="detailArtikel" key={el.id}>
               <div className="judulArtikel">
-                <img
-                  src={el.img} />
+                <img src={el.img} />
                 <h1>{el.judul}</h1>
               </div>
-              <p>{ el.isi}</p>
+              <p>{el.isi}</p>
             </div>
-          )
-        })
-      }
-
-
+          );
+        })}
     </div>
   );
 }
