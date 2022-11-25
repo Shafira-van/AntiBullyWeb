@@ -1,0 +1,76 @@
+.card-psikolog {
+    background: #FFFFFF;
+    border: 1px solid #1366C3;
+    box-shadow: 0px 4px 4px rgba(35, 39, 255, 0.25);
+    border-radius: 5px;
+    width: 70%;
+}
+
+.card-img-psikolog img {
+   
+    border-radius: 5px 0px 0px 5px;
+}
+
+.btn-card-piskolog button {
+    background-color: #1366C3;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.psikolog-name h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.psikolog-job h4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.psikolog-job h5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    .card-psikolog {
+        background: #FFFFFF;
+        border: 1px solid #1366C3;
+        box-shadow: 0px 4px 4px rgba(35, 39, 255, 0.25);
+        border-radius: 5px;
+        width: 100%;
+    }
+    .psikolog-name h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    
+    .psikolog-job h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .psikolog-job h5 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

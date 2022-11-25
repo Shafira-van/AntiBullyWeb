@@ -9,9 +9,9 @@ import ArtikelUser from "./pages/ArtikelUser";
 import HomeUser from './pages/HomeUser'
 import ArtikelPsikologi from "./pages/ArtikelPsikolog";
 import Diskusi from "./components/Diskusi";
-import Psikolog from "./components/Psikolog";
 import Faq from "./components/Faq";
 import DetailArtikel from "./components/DetailArtikel";
+import PsikologPage from "./pages/Psikolog";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Route path="/detailartikel/:judul" element={<DetailArtikel />} />
         {/* <Route path="/komunitas" element={} /> */}
         <Route path="/diskusi" element={<Diskusi />} />
-        <Route path="/psikolog" element={<Psikolog />} />
+        <Route path="/psikolog" element={<PsikologPage />} />
         <Route path="/faq" element={<Faq/> } />
       </Routes>
       <Footer />
