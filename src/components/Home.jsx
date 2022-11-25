@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -30,7 +31,9 @@ function Home() {
             <b>Butuh Teman Cerita?</b>
           </h3>
           <p>Lihat daftar psikolog yang tersedia dan hubungi melalui wa</p>
-          <button>Psikolog</button>
+          <Link to="/psikolog">
+            <button>Psikolog</button>
+          </Link>
         </div>
         <img
           src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/beranda2.png"
@@ -44,14 +47,19 @@ function Home() {
               <b>Membutuhkan bantuan?</b>
             </h3>
             <p>Lihat daftar komunitas yang dapat membantu anda</p>
-            <button>Komunitas</button>
+            <Link to="/komunitas">
+              <button>Komunitas</button>
+            </Link>
+            
           </div>
           <div class="col" id="col2">
             <h3>
               <b>Berbagi Pengalaman dengan user lain</b>
             </h3>
             <p>Ceritakan pengalamanmu atau masalahmu di forum diskusi</p>
-            <button>Diskusi</button>
+            <Link to="/diskusi">
+              <button>Diskusi</button>
+            </Link>
           </div>
         </div>
       </div>
