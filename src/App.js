@@ -1,32 +1,17 @@
 // import logo from './logo.svg';
 import { Routes, Route } from "react-router-dom";
 import './App.css';
-import Footer from "./components/Footer";
-import Navbar from './components/Navbar';
-import Artikel from "./components/Artikel";
-import Home from './components/Home';
-import ArtikelUser from "./pages/ArtikelUser";
-import HomeUser from './pages/HomeUser'
-import ArtikelPsikologi from "./pages/ArtikelPsikolog";
-import Diskusi from "./components/Diskusi";
-import Faq from "./components/Faq";
-import DetailArtikel from "./components/DetailArtikel";
-import PsikologPage from "./pages/Psikolog";
+import Navbar from "./components/Navbar";
+import Psikolog from "./components/Psikolog";
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomeUser />} />
-        <Route path="/artikel" element={<ArtikelUser />} /> 
-        <Route path="/detailartikel/:judul" element={<DetailArtikel />} />
-        {/* <Route path="/komunitas" element={} /> */}
-        <Route path="/diskusi" element={<Diskusi />} />
-        <Route path="/psikolog" element={<PsikologPage />} />
-        <Route path="/faq" element={<Faq/> } />
-      </Routes>
-      <Footer />
+      <header className="App-header">
+        <Navbar />
+        <Psikolog/>
+      </header>
     </div>
   );
 }
