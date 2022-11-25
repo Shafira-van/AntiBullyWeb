@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Artikel from '../components/Artikel'
 import DetailArtikel from '../components/DetailArtikel'
 import Navbar from '../components/Navbar'
@@ -6,10 +7,11 @@ import Navbar from '../components/Navbar'
 function ArtikelUser() {
   return (
     <div>
-      <Navbar/>
-      <Artikel />
-      <DetailArtikel />
-      <Footer/>
+      {/* <Outlet> */}
+      {/* <Navbar/> */}
+        <Artikel />
+      {/* </Outlet> */}
+      {/* <Footer/> */}
     </div>
   )
 }

@@ -6,9 +6,9 @@ import Footer from "../components/Footer"
 function HomeUser() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Home />
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
