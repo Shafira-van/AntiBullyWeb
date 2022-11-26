@@ -57,6 +57,7 @@ function Artikel() {
       {/* </Outlet> */}
     </div>
   );
+
 }
 
 

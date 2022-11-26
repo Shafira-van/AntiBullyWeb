@@ -44,7 +44,7 @@ font-family: 'Poppins', sans-serif; */
   top: 6vw;
   left: 10vw;
   text-align: justify;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #home .header h1 {
@@ -81,7 +81,7 @@ font-family: 'Poppins', sans-serif; */
 
 #home .kontenHome p {
   font-size: 1.6vw;
-  font-weight: 600;
+  /* font-weight: 500; */
 }
 
 #home .kontenHome button {
@@ -97,6 +97,10 @@ font-family: 'Poppins', sans-serif; */
   margin: 4vw 0vw;
 }
 
+#home .kontenHome a{
+  align-self: center;
+}
+
 #home .kontenHome button:hover{
   background-color:#136fd7;
 }
@@ -105,28 +109,38 @@ font-family: 'Poppins', sans-serif; */
   width: 30vw;
 }
 
-#home .container .col {
+#home .row {
+  width: 100%;
+  margin: 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+#home .container .col-5 {
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   border: 2px solid #1366c3;
-  margin: 2vw;
+  margin: 0 1.6vw;
   padding: 1vw 2vw;
   border-radius: 1vw;
 }
 
 #home .container h3 {
-  font-size: 3vw;
+  font-size: 2.4vw;
+  
 }
 
 #home .container p {
   font-size: 1.6vw;
-  font-weight: 600;
+  /* font-weight: 400; */
 }
 
-#home .container button {
+#home .container a{
   align-self: center;
+}
+#home .container button {
   width: 18vw;
   font-weight: 600;
   font-size: 1.6vw;

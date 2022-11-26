@@ -1,0 +1,160 @@
+/* komponen profil */
+.profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2vw 10vw;
+  /* padding-bottom: 2vw; */
+  /* border-bottom: #1366c3 1px solid; */
+}
+.profil h1 {
+  font-size: 3.8vw;
+}
+.profil h2 {
+  font-size: 2vw;
+}
+
+.isiprofil{
+  display: flex;
+}
+
+.imgprofil {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.imgprofil button {
+
+  background-color: #1366c3;
+  width: 20vw;
+  color: white;
+  padding: 0.2vw 1.4vw;
+  border-radius: 0.6vw;
+  margin-top: 1vw;
+  border: 0px;
+}
+
+.isiprofil img {
+  width: 20vw;
+  height: 23vw;
+  border: 1px solid #1366c3;
+}
+
+.profil .textProfil{
+  margin-left: 2vw;
+  width: 50vw;
+}
+.profil .icon{
+  margin-top: 0.6vw;
+}
+
+.profil .icon span{
+  margin-left: 0.6vw;
+}
+
+/* komponen editprofil */
+.isieditProfil{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2vw 10vw;
+  margin-bottom: 1vw;
+}
+.editprofil h1{
+  text-align: center;
+  font-size: 3.8vw;
+}
+
+.isieditProfil img {
+  width: 20vw;
+  height: 23vw;
+  border: 1px solid #1366c3;
+}
+
+.isieditProfil .textProfil{
+  margin-left: 4vw;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.isieditProfil .form-floating input{
+  width: 50vw;
+  margin-bottom: 1.4vw;
+  margin-top: 0vw;
+  border: 1px solid #1366c3;
+}
+
+.isieditProfil .form-floating select {
+  width: 50vw;
+  margin-bottom: 1.4vw;
+  margin-top: 0vw;
+  border: 1px solid #1366c3;
+}
+
+
+/* user */
+.editprofiluser{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vw;
+}
+
+.editprofiluser button{
+  text-align: center;
+  background-color: #1366c3;
+  width: fit-content;
+  color: white;
+  padding: 0.2vw 1.4vw;
+  border-radius: 0.6vw;
+  border: 0px ;
+
+}
+
+/* psikolog */
+
+.profilpsikolog{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vw;
+}
+
+.profilpsikolog table{
+  width: 60vw;
+}
+
+.editprofilpsikolog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  margin-bottom: 2vw;
+}
+
+.editprofilpsikolog table{
+  width: 60%;
+}
+
+.editprofilpsikolog table input{
+  border: 0px solid #1366c3;
+  display: flex;
+  width: 10vw;
+
+}
+
+.editprofilpsikolog button {
+  text-align: center;
+  background-color: #1366c3;
+  width: fit-content;
+  color: white;
+  padding: 0.2vw 1.4vw;
+  border-radius: 0.6vw;
+  border: 0px;
+
+}

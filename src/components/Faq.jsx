@@ -6,11 +6,11 @@ function Faq() {
       <div className="faq">
         <h1>FAQ</h1>
         <p>Frequently Ask Question</p>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
+        <div className="accordion accordion-flush" id="accordionFlushExample">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="flush-headingOne">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne"
@@ -21,18 +21,18 @@ function Faq() {
             </h2>
             <div
               id="flush-collapseOne"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="flush-headingOne"
               data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Anda dapat membuka artikel pada halaman artikel.
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="flush-headingTwo">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo"
@@ -43,20 +43,20 @@ function Faq() {
             </h2>
             <div
               id="flush-collapseTwo"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="flush-headingTwo"
               data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Anda dapat membuka halaman psikolog dan temukan psikolog yang
                 anda minati lalu hubungi melalui wa yang telah disediakan sesuai
                 dengan jadwal yang tertera
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="flush-headingThree">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseThree"
@@ -68,10 +68,10 @@ function Faq() {
             </h2>
             <div
               id="flush-collapseThree"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="flush-headingThree"
               data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Anda dapat membuka menu diskusi dan bagikan pengalaman anda
                 dengan user yang lain
               </div>
