@@ -40,9 +40,9 @@ function Home() {
           alt=""
         />
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col" id="col1">
+      <div className="container">
+        <div className="row">
+          <div className="col-5 " id="col1">
             <h3>
               <b>Membutuhkan bantuan?</b>
             </h3>
@@ -50,9 +50,8 @@ function Home() {
             <Link to="/komunitas">
               <button>Komunitas</button>
             </Link>
-            
           </div>
-          <div class="col" id="col2">
+          <div className="col-5" id="col2">
             <h3>
               <b>Berbagi Pengalaman dengan user lain</b>
             </h3>

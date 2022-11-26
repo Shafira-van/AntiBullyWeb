@@ -86,17 +86,19 @@ function Navbar() {
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
-                  Profil
-                </a>
+                
+                  <CustomLink to="/profil" className="dropdown-item" href="#">
+                    Profil
+                </CustomLink>
               </li>
               <li>
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <CustomLink to="/logout" className="dropdown-item" href="#">
                   Log Out
-                </a>
+                </CustomLink>
+                
               </li>
             </ul>
           </div>
