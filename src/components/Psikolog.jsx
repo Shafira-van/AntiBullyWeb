@@ -6,10 +6,11 @@ function Psikolog() {
 
   const [psikolog, setPsikolog] = useState([]);
   useEffect(() => {
-    console.log("cek ini")
+    
       axios.get('https://6350d871dfe45bbd55afb4ff.mockapi.io/MuseumAsia/psikolog')
       .then(res => {
         setPsikolog(res.data)
+        console.log(res.data)
       })
   }, [])
 return (
@@ -27,7 +28,7 @@ return (
           <div className="psikolog-name">
             <h3>{item.name}</h3>
           </div>
-          <div className="psikolog-job mt-auto">
+          <div className="psikolog-job">
             <h4>{item.hospital}</h4>
             <h5>{item.city}</h5>
           </div>

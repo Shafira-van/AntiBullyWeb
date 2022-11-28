@@ -25,107 +25,8 @@ font-family: 'Poppins', sans-serif; */
   min-height: 90vh;
   width: 100%;
 }
-/* navbar */
-/* .navbar {
-  max-width: 100%;
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.navbar .navbar-toggler {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  border: solid 1px;
-  text-align: center;
-}
-
-.navbar .navbar-toggler-icon {
-  width: 3vw;
-  height: 3vw;
-  margin: 0.4vw 1vw;
-}
-
-.navbar > .container-fluid {
-  width: 80vw;
-  margin: 0 0vw 0 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  position: relative;
-}
-
-.navbar img {
-  width: 5vw;
-  margin-right: 1vw;
-}
-.navbar .navbar-nav li {
-  margin: 0.8vw 0.2vw;
-  text-align: center;
-}
-.navbar .navbar-nav li a {
-  border-radius: 0.6vw;
-  color: black;
-  text-decoration: none;
-  padding: 0.6vw 0.8vw;
-  font-size: 2vw;
-  text-align: center;
-}
-
-.navbar .navbar-nav li a:hover {
-  background-color: #1366c3;
-  color: white;
-}
-
-.navbar .navbar-nav li a#active {
-  background-color: #1366c3;
-  color: white;
-  font-weight: bold;
-}
-
-.navbar .btn-group {
-  width: 14vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  right: 0.4vw;
-  top: 1vw;
-}
-
-.navbar .btn-group img {
-  height: 4vw;
-  width: 4vw;
-  margin-top: 0vw;
-  margin-right: 0;
-  border-radius: 50vw;
-}
-
-.navbar .btn-group button {
-  padding: 0;
-  background-color: transparent;
-  color: black;
-  border-color: transparent;
-  font-size: 2vw;
-  border: none;
-}
-
-.navbar .btn-group 
-.btn.show{
-  background-color: transparent;
-  color: black;
-  
-}
-.tampilan {
-  display: flex;
-  flex-direction: row-reverse;
-} */
-/* header konten */
+/* home */
 
 #home {
   position: relative;
@@ -143,7 +44,7 @@ font-family: 'Poppins', sans-serif; */
   top: 6vw;
   left: 10vw;
   text-align: justify;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #home .header h1 {
@@ -180,7 +81,7 @@ font-family: 'Poppins', sans-serif; */
 
 #home .kontenHome p {
   font-size: 1.6vw;
-  font-weight: 600;
+  /* font-weight: 500; */
 }
 
 #home .kontenHome button {
@@ -196,6 +97,10 @@ font-family: 'Poppins', sans-serif; */
   margin: 4vw 0vw;
 }
 
+#home .kontenHome a{
+  align-self: center;
+}
+
 #home .kontenHome button:hover{
   background-color:#136fd7;
 }
@@ -204,28 +109,38 @@ font-family: 'Poppins', sans-serif; */
   width: 30vw;
 }
 
-#home .container .col {
+#home .row {
+  width: 100%;
+  margin: 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+#home .container .col-5 {
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   border: 2px solid #1366c3;
-  margin: 2vw;
+  margin: 0 1.6vw;
   padding: 1vw 2vw;
   border-radius: 1vw;
 }
 
 #home .container h3 {
-  font-size: 3vw;
+  font-size: 2.4vw;
+  
 }
 
 #home .container p {
   font-size: 1.6vw;
-  font-weight: 600;
+  /* font-weight: 400; */
 }
 
-#home .container button {
+#home .container a{
   align-self: center;
+}
+#home .container button {
   width: 18vw;
   font-weight: 600;
   font-size: 1.6vw;
@@ -293,7 +208,7 @@ font-family: 'Poppins', sans-serif; */
   background-color: aliceblue;
   position: relative;
   border: #1366c3 solid 1px;
-  width: 64vw;
+  width: 66vw;
 }
 
 .artikel .container .baris2 .col button:hover {
