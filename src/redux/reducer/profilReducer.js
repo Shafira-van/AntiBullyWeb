@@ -24,8 +24,12 @@ const profilReducer = (state = initialState, action) => {
         // profil : getId,
       } 
     case SUCCESS_ADD_PROFIL:
+      // const add = state.profil.filter((data) => data.id != action.payload.id)
       return {
-        profil: [...state, action.payload]
+        // ...state, 
+        // add: add.push(action.payload),
+        // profil:add
+        profil: [state, action.payload]
       }
     
     case SUCCESS_UPDATE_PROFIL:

@@ -6,28 +6,17 @@ import { getArtikel } from "../redux/action/artikelAction";
 
 function DetailArtikel() {
   const dispatch = useDispatch();
-
-  // let [id, setId] = useState(1);
-  // let params = useParams()
-  // {id} = params
-  let { id } = useParams()
-  console.log(id)
-
   const { article } = useSelector((state) => state.artikel);
-  // setIde = useParams()
-  // useParams({ide})
+  let { id } = useParams()
 
-  
-
-  // console.log(id)
-
+  const inner ='lorem <b>ipsum</b>'
   useEffect(() => {
     dispatch(getArtikel());
   }, []);
 
   // .filter((el) => el.id === +id)
   return (
-    <div>
+    <div className="kontenKomponen">
       {article
         .filter((el) => el.id === id)
         .map((el) => {
@@ -37,11 +26,10 @@ function DetailArtikel() {
                 <img src={el.img} />
                 <h1>{el.judul}</h1>
               </div>
-              <p>{el.isi}</p>
+              <p dangerouslySetInnerHTML={{ __html: el.isi }}></p>
             </div>
           );
         })}
-      
     </div>
   );
 }
