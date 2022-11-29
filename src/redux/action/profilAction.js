@@ -90,6 +90,7 @@ export const updateProfil = (id, avatar, nama, email, no, tempatkerja, alamat, g
     dispatch(successUpdateProfil(result.data))
     console.log(result.data)
     // window.location = "/user/profil";
+    alert("data berhasil di update")
   }
 }
 
@@ -111,5 +112,6 @@ export const updateJadwal = (id, jadwalpraktek) => {
     dispatch(successUpdateJadwal(result.data))
     console.log(result.data)
     // window.location = "/profil";
+    alert("data berhasil di update")
   }
 }
