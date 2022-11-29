@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home({ admin, id }) {
   return (
     <div className="kontenKomponen" id="home">
       <img
@@ -31,7 +31,7 @@ function Home() {
             <b>Butuh Teman Cerita?</b>
           </h3>
           <p>Lihat daftar psikolog yang tersedia dan hubungi melalui wa</p>
-          <Link to="/psikolog">
+          <Link to={`${admin}/${id}/psikolog`}>
             <button>Psikolog</button>
           </Link>
         </div>
@@ -47,7 +47,7 @@ function Home() {
               <b>Membutuhkan bantuan?</b>
             </h3>
             <p>Lihat daftar komunitas yang dapat membantu anda</p>
-            <Link to="/komunitas">
+            <Link to={`${admin}/${id}/komunitas`}>
               <button>Komunitas</button>
             </Link>
           </div>
@@ -56,7 +56,7 @@ function Home() {
               <b>Berbagi Pengalaman dengan user lain</b>
             </h3>
             <p>Ceritakan pengalamanmu atau masalahmu di forum diskusi</p>
-            <Link to="/diskusi">
+            <Link to={`${admin}/${id}/diskusi`}>
               <button>Diskusi</button>
             </Link>
           </div>

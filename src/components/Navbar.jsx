@@ -1,10 +1,19 @@
-import React from "react";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useMatch, useParams, useResolvedPath } from "react-router-dom";
+import { getProfil } from "../redux/action/profilAction";
 import "../StyleSheet/Navbar.css";
 // import logo from '../Asset/Navbar/LOGO.gif'
 
 function Navbar({ admin, id }) {
-  console.log(id);
+  const { profil } = useSelector((state) => state.profil);
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    dispatch(getProfil());
+  }, []);
+
   return (
     <>
       <nav className="container navbar navbar-expand-lg bg-transparent">
@@ -87,35 +96,44 @@ function Navbar({ admin, id }) {
               </li>
             </ul>
           </div>
-          <div className="dropdown Account d-none d-lg-block">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <img
-                src="https://assets.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png?t=o&v=770"
-                alt=""
-              />
-              Account
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <CustomLink to="/profil" className="dropdown-item" href="#">
-                  Profil
-                </CustomLink>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <CustomLink to="/logout" className="dropdown-item" href="#">
-                  Log Out
-                </CustomLink>
-              </li>
-            </ul>
-          </div>
+          {profil
+            .filter((item) => item.id === id)
+            .map((item) => {
+              return (
+                <div className="dropdown Account d-none d-lg-block">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img
+                      src="https://assets.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png?t=o&v=770"
+                      alt=""
+                    />
+                    {item.nama}
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <CustomLink
+                        to={`${admin}/${id}/profil`}
+                        className="dropdown-item"
+                        href="#">
+                        Profil
+                      </CustomLink>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <CustomLink to="/" className="dropdown-item" href="#">
+                        Log Out
+                      </CustomLink>
+                    </li>
+                  </ul>
+                </div>
+              );
+            })}
         </div>
       </nav>
     </>

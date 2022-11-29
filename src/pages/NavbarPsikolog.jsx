@@ -1,16 +1,14 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
-import Navbar from '../components/Navbar'
+import React from "react";
+import { useParams } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function NavbarPsikolog() {
-   let { id } = useParams();
-   console.log(id);
+  let { id } = useParams();
   return (
     <div>
-      
-      <Navbar admin={"/admin"} id={ id} />
+      <Navbar admin={"/admin"} id={id} />
     </div>
-  )
+  );
 }
 
-export default NavbarPsikolog
+export default NavbarPsikolog;

@@ -15,9 +15,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Register /> */}
-        {/* <Login /> */}
-       
         <Routes>
         <Route path="/" element={<HomeLogin />  } />
           <Route path="/register" element={<Register />} />
@@ -25,8 +22,7 @@ function App() {
           <Route path="/user/:id/*" element={<User />} />
           <Route path="/admin/:id/*" element={<PsikologAlur />  } />
       </Routes>
-        {/* <PsikologAlur/> */}
-        {/* <User /> */}
+
       </header>
     </div>
   );
