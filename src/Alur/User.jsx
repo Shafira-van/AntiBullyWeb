@@ -19,7 +19,7 @@ import OutletKomunitas from "../pages/OutletKomunitas";
 
 function User() {
   return (
-    <div>
+    <div className='kontenKomponen'>
       <NavbarUser />
       <Routes>
         {/* <Route path="/userlogin" element={<Login />} /> */}
@@ -29,7 +29,7 @@ function User() {
           <Route path="detailartikel/:id/:judul" element={<DetailArtikel />} />
         </Route>
         <Route path="/komunitas" element={<OutletKomunitas />}>
-          <Route index element={<Komunitas/>} />
+          <Route index element={<Komunitas />} />
           <Route path="detailkomunitas/:id" element={<DetailKomunitas />} />
         </Route>
         <Route path="/diskusi" element={<Diskusi />} />
