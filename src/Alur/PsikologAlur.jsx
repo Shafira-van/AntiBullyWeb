@@ -12,12 +12,16 @@ import EditProfilPsikolog from "../pages/EditProfilPsikolog";
 import Psikolog from '../components/Psikolog';
 import Profil from '../pages/Profil';
 import Artikel from '../pages/Artikel';
+import Komunitas from '../pages/Komunitas';
+import DetailKomunitas from '../pages/DetailKomunitas';
 
 function PsikologAlur() {
   return (
     <div>
       <Navbar />
       <Routes>
+      <Route path="/komunitas" element={<Komunitas />} />
+      <Route path="/DetailKomunitas/:id" element={<DetailKomunitas />} />
         <Route path="/" element={<HomeUser />} />
         <Route path="/artikel" element={<Artikel />}>
           <Route index element={<ArtikelPsikolog />} />
