@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import '../StyleSheet/Navbar.css'
+import "../StyleSheet/Navbar.css";
 // import logo from '../Asset/Navbar/LOGO.gif'
 
-function Navbar() {
+function Navbar({ admin, id }) {
+  console.log(id);
   return (
     <>
       <nav className="container navbar navbar-expand-lg bg-transparent">
@@ -27,45 +28,60 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <CustomLink to="/" className="nav-link" href="#">
+                <CustomLink to={`${admin}/${id}`} className="nav-link" href="#">
                   Beranda
                 </CustomLink>
               </li>
               <li className="nav-item text-decoration-none">
                 <CustomLink
-                  to="/artikel"
+                  to={`${admin}/${id}/artikel`}
                   className="nav-link text-decoration-none"
                   href="#">
                   Artikel
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink to="/psikolog" className="nav-link" href="#">
+                <CustomLink
+                  to={`${admin}/${id}/psikolog`}
+                  className="nav-link"
+                  href="#">
                   Psikolog
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink to="/komunitas" className="nav-link" href="#">
+                <CustomLink
+                  to={`${admin}/${id}/komunitas`}
+                  className="nav-link"
+                  href="#">
                   Komunitas
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink to="/diskusi" className="nav-link" href="#">
+                <CustomLink
+                  to={`${admin}/${id}/diskusi`}
+                  className="nav-link"
+                  href="#">
                   Diskusi
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink to="/faq" className="nav-link" href="#">
+                <CustomLink
+                  to={`${admin}/${id}/faq`}
+                  className="nav-link"
+                  href="#">
                   FAQ
                 </CustomLink>
               </li>
               <li className="nav-item d-lg-none">
-                <CustomLink to="/profil" className="nav-link" href="#">
+                <CustomLink
+                  to={`${admin}/${id}/profil`}
+                  className="nav-link"
+                  href="#">
                   Profil
                 </CustomLink>
               </li>
               <li className="nav-item d-lg-none">
-                <CustomLink to="/logout" className="nav-link" href="#">
+                <CustomLink to="/" className="nav-link" href="#">
                   Log Out
                 </CustomLink>
               </li>
@@ -86,9 +102,8 @@ function Navbar() {
             </a>
             <ul className="dropdown-menu">
               <li>
-                
-                  <CustomLink to="/profil" className="dropdown-item" href="#">
-                    Profil
+                <CustomLink to="/profil" className="dropdown-item" href="#">
+                  Profil
                 </CustomLink>
               </li>
               <li>
@@ -98,7 +113,6 @@ function Navbar() {
                 <CustomLink to="/logout" className="dropdown-item" href="#">
                   Log Out
                 </CustomLink>
-                
               </li>
             </ul>
           </div>
@@ -110,15 +124,11 @@ function Navbar() {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
     return (
-        <Link id={isActive ? "active" : ""} to={to}>
-          {children}
-        </Link>
+      <Link id={isActive ? "active" : ""} to={to}>
+        {children}
+      </Link>
     );
   }
- }
- 
- export default Navbar;
+}
 
-
-
-
+export default Navbar;

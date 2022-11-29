@@ -1,68 +1,41 @@
-import React from "react";
+import EditJadwalPraktek from "../components/EditJadwalPraktek";
 import EditProfil from "../components/EditProfil";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { getProfilId } from "../redux/action/profilAction";
+import { useParams } from "react-router-dom";
 
 function EditProfilPsikolog() {
+  const { profil } = useSelector((state) => state.profil);
+  const dispatch = useDispatch();
+
+  let { id } = useParams();
+  
+  useEffect(() => {
+    dispatch(getProfilId());
+  }, []);
+
   return (
     <div className="kontenKomponen">
-      <EditProfil />
-      <div className="editprofilpsikolog">
-        <h2>Jadwal Konsultasi</h2>
-        <table className="table table-bordered">
-          <thead>
-            <tr className="table-primary">
-              <th scope="col">#</th>
-              <th scope="col">Senin</th>
-              <th scope="col">Selasa</th>
-              <th scope="col">Rabu</th>
-              <th scope="col">Kamis</th>
-              <th scope="col">Jumat</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" className="table-primary">
-                Buka
-              </th>
-              <td>
-                <input type="text" value="hai" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" className="table-primary">
-                Tutup
-              </th>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <button>Simpan</button>
-      </div>
+      {profil
+        .filter((item) => item.id === id)
+        .map((item) => {
+          return (
+            <>
+              <EditProfil
+                id={item.id}
+                img={item.avatar}
+                nama={item.nama}
+                email={item.email}
+                no={item.no}
+                tempatkerja={item.tempatkerja}
+                alamat={item.alamat}
+                gender={item.gender}
+                status={item.status}
+              />
+            </>
+          );
+        })}
     </div>
   );
 }
