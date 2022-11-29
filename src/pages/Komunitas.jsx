@@ -25,7 +25,7 @@ function Komunitas() {
   function filterUser() {
     // console.log(user)
     const x = user.filter(function (data) {
-      if (dataProvinsi === "") {
+      if (provinsi === "") {
         return data;
       } else {
         return data.provinsi === provinsi ? true : false;
@@ -38,18 +38,9 @@ function Komunitas() {
     user.map((item) => {
       const x = item.provinsi;
       setOption(x);
-      // let uniqueProvinsi = x.filter((element, index) => {
-      //   return x.indexOf(element) === index;
-      // })
     });
 
     console.log("ini option", option);
-
-    //     let chars = ['A', 'B', 'A', 'C', 'B'];
-
-    // let uniqueChars = chars.filter((element, index) => {
-    //     return chars.indexOf(element) === index;
-    // });
   }
 
   const handleSubmit = (e) => {
@@ -58,16 +49,6 @@ function Komunitas() {
     filterOption();
     console.log("ini data provinsi", dataProvinsi);
   };
-
-  // const handleDetail = (id) => {
-  //   navigation(`/DetailKomunitas/${id}`)
-  // }
-
-  // const handleDetail = (id) => {
-  //   navigation(`/detailKomunitas/${id}`)
-  // }
-  
-  
   return (
     <div className="kontenKomponen">
       <div className="row">
@@ -79,12 +60,8 @@ function Komunitas() {
                   <select
                     value={provinsi}
                     onChange={(e) => setProvinsi(e.target.value)}
-                    class="form-select form-select-sm">
-                    {/* <option selected className='bg-transparent'>Lihat Daftar Kota</option>
-                                    {komunitas.map((item,index) => 
-                                        <option key={index} value={item.provinsi}>{item.provinsi}</option>
-                                    )} */}
-
+                    class="form-select form-select-sm"
+                  >
                     <option value="">Pilih provinsi</option>
                     <option value="provinsi 1">Sumatera Utara</option>
                     <option value="provinsi 3">Sumatera Barat</option>
@@ -122,7 +99,8 @@ function Komunitas() {
                       <div className="col-3 d-flex align-items-center justify-content-center">
                         <Link
                           to={`detailkomunitas/${item.id}`}
-                          className="nav-link">
+                          className="nav-link"
+                        >
                           <button className="btn btn-primary">Lihat</button>
                         </Link>
                       </div>
