@@ -1,18 +1,28 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios';
 import '../StyleSheet/Psikolog.css'
+import loading from '../Asset/homePage/login.gif'
 
 function Psikolog() {
 
   const [psikolog, setPsikolog] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     
       axios.get('https://6350d871dfe45bbd55afb4ff.mockapi.io/MuseumAsia/psikolog')
       .then(res => {
         setPsikolog(res.data)
         console.log(res.data)
+        setIsLoading(false)
       })
   }, [])
+  
+  if (isLoading) return(
+    <div className="d-flex align-items-center justify-content-center vh-100">
+          <img className='img-fluid' src={loading} alt="" />
+    </div>
+  )
+
   return (
     <div className="kontenKomponen">
       <div className="Psikolog mb-3">

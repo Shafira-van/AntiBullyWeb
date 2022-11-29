@@ -16,7 +16,7 @@ function Navbar({ admin, id }) {
 
   return (
     <>
-      <nav className="container navbar navbar-expand-lg bg-transparent">
+      <nav className="container navbar navbar-expand-lg bg-transparent p-3">
         <div className="img-nav container-fluid">
           <a className="navbar-brand" href="#">
             <img
