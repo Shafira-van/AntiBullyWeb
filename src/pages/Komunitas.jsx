@@ -1,7 +1,9 @@
 import React, { useEffect,useState } from 'react'
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 import '../StyleSheet/Komunitas.css'
 function Komunitas() {
+  const navigation = useNavigate();
   const [user, setUser] = useState([]);
   const [provinsi, setProvinsi] = useState([]);
   const [dataProvinsi, setDataProvinsi] = useState([]);
@@ -58,6 +60,9 @@ function Komunitas() {
 
   }
 
+  const handleDetail = (id) => {
+    navigation(`/DetailKomunitas/${id}`)
+  }
   
   
   return ( 
@@ -107,7 +112,7 @@ function Komunitas() {
                                       </div>
                                   </div>
                                   <div className="col-3 d-flex align-items-center justify-content-center">
-                                      <button className="btn btn-primary">Lihat</button>
+                                      <button onClick={() => handleDetail(item.id)} className="btn btn-primary">Lihat</button>
                                   </div>
                               </div>
                           </div>
