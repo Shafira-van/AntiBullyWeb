@@ -23,7 +23,7 @@ import OutletKomunitas from "../pages/OutletKomunitas";
 
 function PsikologAlur() {
   return (
-    <div>
+    <div className='kontenKomponen'>
       <NavbarPsikolog />
       <Routes>
         <Route path="/komunitas" element={<Komunitas />} />
