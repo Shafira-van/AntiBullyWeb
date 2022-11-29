@@ -26,7 +26,7 @@ function PsikologAlur() {
       <NavbarPsikolog />
       <Routes>
       <Route path="/komunitas" element={<Komunitas />} />
-      <Route path="/DetailKomunitas/:id" element={<DetailKomunitas />} />
+      <Route path="detailKomunitas/:id" element={<DetailKomunitas />} />
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomePsikolog />} />
         <Route path="/artikel" element={<Artikel />}>

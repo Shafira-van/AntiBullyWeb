@@ -27,15 +27,6 @@ function DetailKomunitas() {
         getUser() 
       }, [])
 
-    //   function maping() {
-    //     const result = user.filter((item) => item.id === id).map((item) =>{
-            
-    //     })
-    //     console.log("ini hasil result", result)
-    //   }
-    //   maping()
-
-
     return ( 
         <>
         {/* card komunitas */}

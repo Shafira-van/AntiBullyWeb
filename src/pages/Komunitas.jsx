@@ -60,68 +60,79 @@ function Komunitas() {
 
   }
 
+  const handleDetail = (id) => {
+    navigation(`/detailKomunitas/${id}`)
+  }
   
   
-  return ( 
-  
-    <div className="row">
-            <div className="col-lg-4 col-md-4 sol-sm-12 col-12 ">
-                <div className="list-kota p-3">
-                    <div className="row d-flex justify-content-center">
-                        <div className="col-10">
-                            <form action="" onSubmit={handleSubmit}>
-                                <select value={provinsi} onChange={(e) => setProvinsi(e.target.value)} class="form-select form-select-sm">
-                                  <option value="">Pilih provinsi</option>
-                                  <option value="provinsi 1">Sumatera Utara</option>
-                                  <option value="provinsi 3">Sumatera Barat</option>
-                                </select>
-                                <div className="button-komunitas mt-3 text-center">
-                                  <button class="btn btn-primary">Cari</button>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-              </div>
-                      <div className="col-lg-8 col-md-8 col-sm-12 col-12 mt-3">
-                        {dataProvinsi.map((item) => {
-                          return (
-                            <>
-                              <div className="komunitas mb-3">
-                                <div key={item.id} className="card mx-auto mb-3">
-                                  <div className="row">
-                                    <div className="profil-komunitas col-3 text-center">
-                                      <img
-                                        className="img-fluid p-2"
-                                        src={item.picture}
-                                        alt=""
-                                      />
-                                      <h6 className="p-2">{item.provinsi}</h6>
-                                    </div>
-                                    <div className="deskripsi-komunitas col-6 d-flex flex-column">
-                                      <h6>{item.nama}</h6>
-                                      <h5>{item.selogan}</h5>
-                                      <div className="alamat-komunitas mt-auto">
-                                        <h5>{item.alamat}</h5>
-                                      </div>
-                                    </div>
-                                    <div className="col-3 d-flex align-items-center justify-content-center">
-                                      <button
-                                        onClick={() => handleDetail(item.id)}
-                                        className="btn btn-primary">
-                                        Lihat
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </>
-                          );
-                        })}
-                      </div>
+  return (
+    <div className="kontenKomponen">
+      <div className="row">
+        <div className="col-lg-4 col-md-4 sol-sm-12 col-12 ">
+          <div className="list-kota p-3">
+            <div className="row d-flex justify-content-center">
+              <div className="col-10">
+                <form action="" onSubmit={handleSubmit}>
+                  <select
+                    value={provinsi}
+                    onChange={(e) => setProvinsi(e.target.value)}
+                    class="form-select form-select-sm">
+                    {/* <option selected className='bg-transparent'>Lihat Daftar Kota</option>
+                                    {komunitas.map((item,index) => 
+                                        <option key={index} value={item.provinsi}>{item.provinsi}</option>
+                                    )} */}
+
+                    <option value="">Pilih provinsi</option>
+                    <option value="provinsi 1">Sumatera Utara</option>
+                    <option value="provinsi 3">Sumatera Barat</option>
+                  </select>
+                  <div className="button-komunitas mt-3 text-center">
+                    <button class="btn btn-primary">Cari</button>
                   </div>
-                );
-              }
-    
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-8 col-md-8 col-sm-12 col-12 mt-3">
+          {dataProvinsi.map((item) => {
+            return (
+              <>
+                <div className="komunitas mb-3">
+                  <div key={item.id} className="card mx-auto mb-3">
+                    <div className="row">
+                      <div className="profil-komunitas col-3 text-center">
+                        <img
+                          className="img-fluid p-2"
+                          src={item.picture}
+                          alt=""
+                        />
+                        <h6 className="p-2">{item.provinsi}</h6>
+                      </div>
+                      <div className="deskripsi-komunitas col-6 d-flex flex-column">
+                        <h6>{item.nama}</h6>
+                        <h5>{item.selogan}</h5>
+                        <div className="alamat-komunitas mt-auto">
+                          <h5>{item.alamat}</h5>
+                        </div>
+                      </div>
+                      <div className="col-3 d-flex align-items-center justify-content-center">
+                        <button
+                          onClick={() => handleDetail(item.id)}
+                          className="btn btn-primary">
+                          Lihat
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Komunitas;

@@ -28,7 +28,7 @@ function User() {
           <Route path="detailartikel/:id/:judul" element={<DetailArtikel />} />
         </Route>
         <Route path="/komunitas" element={<Komunitas />} />
-        <Route path="/DetailKomunitas/:id" element={<DetailKomunitas />} />
+        <Route path="/detailKomunitas/:id" element={<DetailKomunitas />} />
         <Route path="/diskusi" element={<Diskusi />} />
         <Route path="/psikolog" element={<Psikolog />} />
         <Route path="/faq" element={<Faq />} />
