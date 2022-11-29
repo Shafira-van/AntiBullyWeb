@@ -1,7 +1,7 @@
-import React from 'react'
-import Home from '../components/Home'
-import Navbar from '../components/Navbar'
-import Footer from "../components/Footer"
+import React from "react";
+import Home from "../components/Home";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function HomeUser() {
   return (
@@ -10,7 +10,7 @@ function HomeUser() {
       <Home />
       {/* <Footer/> */}
     </div>
-  )
+  );
 }
 
-export default HomeUser
+export default HomeUser;

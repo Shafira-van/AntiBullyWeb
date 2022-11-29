@@ -1,48 +1,51 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+// import JadwalPraktek from "../components/JadwalPraktek";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 import Profil from "../components/Profil";
+import { getProfil, getProfilId } from "../redux/action/profilAction";
+import JadwalPraktek from "../components/JadwalPraktek";
+import { useParams } from "react-router-dom";
 
 function ProfilPsikolog() {
+  const { profil } = useSelector((state) => state.profil);
+  let { id } = useParams()
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProfil());
+  }, []);
+
   return (
     <div>
-      <Profil />
-      <div className="profilpsikolog">
-        <h2>Jadwal Konsultasi</h2>
-        <table className="table table-bordered">
-          <thead>
-            <tr className="table-primary">
-              <th scope="col">#</th>
-              <th scope="col">Senin</th>
-              <th scope="col">Selasa</th>
-              <th scope="col">Rabu</th>
-              <th scope="col">Kamis</th>
-              <th scope="col">Jumat</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" className="table-primary">
-                Buka
-              </th>
-              <td>1pm</td>
-              <td>2pm</td>
-              <td>3pm</td>
-              <td>4pm</td>
-              <td>5pm</td>
-            </tr>
-            <tr>
-              <th scope="row" className="table-primary">
-                Tutup
-              </th>
-              <td>6am</td>
-              <td>7am</td>
-              <td>8am</td>
-              <td>9am</td>
-              <td>10am</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      {profil
+        .filter((item) => item.id === id)
+        .map((item) => {
+        return (
+          <>
+            <Profil
+              id={item.id}
+              img={item.avatar}
+              nama={item.nama}
+              email={item.email}
+              no={item.no}
+              tempatkerja={item.tempatkerja}
+              alamat={item.alamat}
+              gender={item.gender}
+              status={item.status}
+            />
+            <JadwalPraktek
+              id={item.id}
+              nama={item.nama}
+              senin={item.jadwalpraktek.senin}
+              selasa={item.jadwalpraktek.selasa}
+              rabu={item.jadwalpraktek.rabu}
+              kamis={item.jadwalpraktek.kamis}
+              jumat={item.jadwalpraktek.jumat}
+            />
+          </>
+        );
+      })}
     </div>
   );
 }

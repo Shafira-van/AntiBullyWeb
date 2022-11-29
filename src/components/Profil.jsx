@@ -1,51 +1,80 @@
-import React from "react";
 import "../StyleSheet/Profil.css";
 import EditProfil from "./EditProfil";
 import { Icon } from "@iconify/react";
 import { Link, Outlet, useMatch, useResolvedPath } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getProfil } from "../redux/action/profilAction";
 
-function Profil() {
+
+
+function Profil({ id, img, nama, email, no, tempatkerja, alamat, gender }) {
+  
+  
+
+  const dispatch = useDispatch();
+
+   useEffect(() => {
+     dispatch(getProfil());
+   }, []);
+
+  const [editProfil, setEditProfil] = useState(false);
+
+
+
   return (
-    <div>
-      <div className="profil">
-        <h1>Profil</h1>
-        <div className="isiprofil">
+    <div key={id}>
+      <div className="profil" >
+        <div className="isiprofil" >
           <div className="imgprofil">
-            <img
-              src="https://assets.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png?t=o&v=770"
-              className="img-thumbnail"
-              alt="..."></img>
-            <Link to="editprofil/1/shafira">
-              <button>Edit Profil</button>
-            </Link>
+            <img src={img} className="img-thumbnail" alt="..." /> 
+           {!editProfil && (
+              <div id="more">
+                <Link
+                  to={`editprofil/${id}/${nama}`}
+                  onClick={() => setEditProfil(true)}>
+                  <button >Edit Profil</button>
+                </Link>
+              </div>
+            )}
+
           </div>
           <div className="textProfil">
             <div id="nama" className="icon">
-              <h2>Nama</h2>
+              <h2>{nama}</h2>
             </div>
             <div id="email" className="icon">
               <Icon
                 icon="material-symbols:attach-email-outline-rounded"
-                width="30"
-                height="30"
+                width="3vw"
+                height="3vw"
               />
-              <span>Email</span>
+              <span>{email}</span>
             </div>
             <div id="noHandphone" className="icon">
-              <Icon icon="fxemoji:lefthandphone" width="30" height="30" />
-              <span>NoHandphone</span>
+              <Icon icon="fxemoji:lefthandphone" width="3vw" height="3vw" />
+              <span>{no}</span>
             </div>
             <div id="noHandphone" className="icon">
-              <Icon icon="ic:baseline-work-history" width="30" height="30" />
-              <span>Tempat Bekerja</span>
+              <Icon
+                icon="ic:baseline-work-history"
+                width="3vw"
+                height="3vw"
+              />
+              <span>{tempatkerja}</span>
             </div>
             <div id="noHandphone" className="icon">
-              <Icon icon="ph:address-book" width="30" height="30" />
-              <span>Alamat</span>
+              <Icon icon="ph:address-book" width="3vw" height="3vw" />
+              <span>{alamat}</span>
             </div>
             <div id="noHandphone" className="icon">
-              <Icon icon="ph:gender-intersex-bold" width="30" height="30" />
-              <span>Jenis Kelamin</span>
+              <Icon
+                icon="ph:gender-intersex-bold"
+                width="3vw"
+                height="3vw"
+              />
+              <span>{gender}</span>
             </div>
           </div>
         </div>
