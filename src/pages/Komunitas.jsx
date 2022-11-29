@@ -63,9 +63,9 @@ function Komunitas() {
   //   navigation(`/DetailKomunitas/${id}`)
   // }
 
-  const handleDetail = (id) => {
-    navigation(`/detailKomunitas/${id}`)
-  }
+  // const handleDetail = (id) => {
+  //   navigation(`/detailKomunitas/${id}`)
+  // }
   
   
   return (
