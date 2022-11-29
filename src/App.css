@@ -310,7 +310,7 @@ flex-direction: column;
 font-size: 2.2vw;
 }
 .artikelForm .judul input{
-  width: 630px;
+  width: 80vw;
   padding:0.4vw 1vw;
   border: rgb(151, 149, 149) 1px solid;
 }
@@ -328,7 +328,7 @@ font-size: 2.2vw;
 }
 
 .artikelForm .cover input {
-  width: 630px;
+  width: 80vw;
   border: rgb(151, 149, 149) 1px solid;
 }
 
@@ -346,6 +346,21 @@ font-size: 2.2vw;
   border: 0;
   border-radius: 0.4vw;
 }
+
+
+.ck.ck-editor{
+  width: 80vw;
+  font-size: 2vw;
+}
+
+.ck.ck-toolbar{
+  font-size: 2vw;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  font-size: 2vw;
+}
+
 
 /* diskusi */
 .diskusi{
