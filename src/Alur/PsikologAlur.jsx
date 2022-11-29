@@ -19,14 +19,18 @@ import EditJadwalPsikolog from "../pages/EditJadwalPsikolog";
 import NavbarPsikolog from "../pages/NavbarPsikolog";
 import Komunitas from '../pages/Komunitas';
 import DetailKomunitas from '../pages/DetailKomunitas';
+import OutletKomunitas from "../pages/OutletKomunitas";
 
 function PsikologAlur() {
   return (
     <div>
       <NavbarPsikolog />
       <Routes>
-      <Route path="/komunitas" element={<Komunitas />} />
-      <Route path="/DetailKomunitas/:id" element={<DetailKomunitas />} />
+        <Route path="/komunitas" element={<Komunitas />} />
+        <Route path="/komunitas" element={<OutletKomunitas />}>
+          <Route index element={<Komunitas />} />
+          <Route path="detailkomunitas/:id" element={<DetailKomunitas />} />
+        </Route>
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomePsikolog />} />
         <Route path="/artikel" element={<Artikel />}>

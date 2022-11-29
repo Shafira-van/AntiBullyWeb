@@ -22,17 +22,13 @@ function Artikel() {
             {article.splice(0, 4).map((item) => {
               return (
                 <Link
-                    to={`detailartikel/${item.id}/${item.judul}`}
-                    className="nav-link"
-                  >
+                  to={`detailartikel/${item.id}/${item.judul}`}
+                  className="nav-link">
                   <div className="col" key={item.id}>
-                  
                     <button>
                       <img src={item.img} alt="" />
                       <p>{item.judul}</p>
                     </button>
-                    
-                  
                   </div>
                 </Link>
               );
@@ -41,18 +37,17 @@ function Artikel() {
           <div className="baris2">
             {article.map((item) => {
               return (
-                <Link to={`detailartikel/${item.id}/${item.judul}`}
-                    className="nav-link"
-                    href="#">
-                <div className="col" key={item.id}>
-                  
-                    
+                <Link
+                  to={`detailartikel/${item.id}/${item.judul}`}
+                  className="nav-link"
+                  href="#">
+                  <div className="col" key={item.id}>
                     <button>
                       <img src={item.img} alt="" />
                       <p>{item.judul}</p>
                     </button>
-                  
-                </div></Link>
+                  </div>
+                </Link>
               );
             })}
           </div>

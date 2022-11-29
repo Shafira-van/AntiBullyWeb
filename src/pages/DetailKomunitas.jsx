@@ -11,7 +11,7 @@ import twitter from '../Asset/detailkomunitas/twitter.png'
 
 
 function DetailKomunitas() {
-    const { id } = useParams();
+    let { id } = useParams();
     console.log(id);
     const [user, setUser] = useState([]);
     useEffect(() => {
@@ -38,7 +38,8 @@ function DetailKomunitas() {
 
     return ( 
         <>
-        {/* card komunitas */}
+            {/* card komunitas */}
+            
         {user.filter((item) => item.id === id).map((item => {
             return(
                 <>
