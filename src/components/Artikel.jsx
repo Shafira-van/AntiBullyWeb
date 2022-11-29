@@ -1,64 +1,65 @@
-import React from "react";
 import { Link, Outlet, useMatch, useResolvedPath } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getArtikel } from "../redux/action/artikelAction";
+import DetailArtikel from "./DetailArtikel";
 
 function Artikel() {
+  const dispatch = useDispatch();
+  const { article } = useSelector((state) => state.artikel);
+
+  useEffect(() => {
+    dispatch(getArtikel());
+  }, []);
+
   return (
     <div className="kontenKomponen">
       <Outlet />
       <div className="artikel">
         <div className="container">
           <div className="row">
-            <div className="col">
-              <Link
-                to="detailartikel/1/Cara terhindar dan mencegah terjadinya bullying"
-                className="nav-link"
-                href="#">
-                <button>
-                  <img
-                    src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/4026024.jpg"
-                    alt=""
-                  />
-                  <p>Cara agar tidak menjadi pelaku bullying</p>
-                </button>
-              </Link>
-            </div>
-            <div className="col">
-              <button>
-                <img
-                  src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/4026024.jpg"
-                  alt=""
-                />
-                <p>Cara agar tidak menjadi pelaku bullying</p>
-              </button>
-            </div>
+            {article.splice(0, 4).map((item) => {
+              return (
+                <Link
+                    to={`detailartikel/${item.id}/${item.judul}`}
+                    className="nav-link"
+                  >
+                  <div className="col" key={item.id}>
+                  
+                    <button>
+                      <img src={item.img} alt="" />
+                      <p>{item.judul}</p>
+                    </button>
+                    
+                  
+                  </div>
+                </Link>
+              );
+            })}
           </div>
           <div className="baris2">
-            <div className="col">
-              <button>
-                <img
-                  src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/4026024.jpg"
-                  alt=""
-                />
-                <p>Cara agar tidak menjadi pelaku bullying</p>
-              </button>
-            </div>
-            <div className="col">
-              <button>
-                <img
-                  src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/4026024.jpg"
-                  alt=""
-                />
-                <p>Cara agar tidak menjadi pelaku bullying</p>
-              </button>
-            </div>
+            {article.map((item) => {
+              return (
+                <Link to={`detailartikel/${item.id}/${item.judul}`}
+                    className="nav-link"
+                    href="#">
+                <div className="col" key={item.id}>
+                  
+                    
+                    <button>
+                      <img src={item.img} alt="" />
+                      <p>{item.judul}</p>
+                    </button>
+                  
+                </div></Link>
+              );
+            })}
           </div>
         </div>
       </div>
-      {/* </Outlet> */}
     </div>
   );
-
 }
-
 
 export default Artikel;

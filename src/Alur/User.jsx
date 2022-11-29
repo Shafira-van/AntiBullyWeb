@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import HomeUser from "../pages/HomeUser";
 import ArtikelUser from "../pages/ArtikelUser";
 import DetailArtikel from "../components/DetailArtikel";
@@ -12,18 +11,24 @@ import EditProfilUser from "../pages/EditProfilUser";
 import Psikolog from "../components/Psikolog";
 import Profil from "../pages/Profil";
 import Artikel from "../pages/Artikel";
+import Komunitas from '../pages/Komunitas';
+import DetailKomunitas from "../pages/DetailKomunitas";
+import Login from "../components/Login";
+import NavbarUser from "../pages/NavbarUser";
 
 function User() {
   return (
     <div>
-      <Navbar />
+      <NavbarUser />
       <Routes>
+        {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomeUser />} />
         <Route path="/artikel" element={<Artikel />}>
           <Route index element={<ArtikelUser />} />
           <Route path="detailartikel/:id/:judul" element={<DetailArtikel />} />
         </Route>
-        {/* <Route path="/komunitas" element={} /> */}
+        <Route path="/komunitas" element={<Komunitas />} />
+        <Route path="/DetailKomunitas/:id" element={<DetailKomunitas />} />
         <Route path="/diskusi" element={<Diskusi />} />
         <Route path="/psikolog" element={<Psikolog />} />
         <Route path="/faq" element={<Faq />} />

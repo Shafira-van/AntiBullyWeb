@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 function Profil() {
   return (
-    <div>
+    <div className='kontenKomponen'>
       <Outlet/>
     </div>
 
