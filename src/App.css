@@ -49,14 +49,28 @@ font-family: 'Poppins', sans-serif; */
 
 #home .header h1 {
   font-size: 3vw;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 #home .header h2 {
-  font-size: 2vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+#home .header span {
+  font-weight: 600;
+  color: #1366c3;
+  font-family: 'Poppins', sans-serif;
 }
 
 #home .header p {
-  font-size: 1.6vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 #home .kontenHome {

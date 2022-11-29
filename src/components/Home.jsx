@@ -11,10 +11,10 @@ function Home() {
       />
       <div className="header">
         <h1>Our Mission</h1>
-        <h2>
-          Your <b>Smile</b> Beautifies The <b>World</b>
+        <h2 className="mt-2">
+          Your <span>Smile</span> Beautifies The <span>world</span>
         </h2>
-        <p>
+        <p className="mt-3">
           Ayo hentikan budaya bully di Indonesia, mari kita bangkit bersama
           bangun Indonesia lebih maju.
         </p>
