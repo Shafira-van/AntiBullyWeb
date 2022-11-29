@@ -10,8 +10,6 @@ function ArtikelUser() {
       {/* <Outlet> */}
       {/* <Navbar/> */}
       <Artikel />
-      {/* </Outlet> */}
-      {/* <Footer/> */}
     </div>
   );
 }

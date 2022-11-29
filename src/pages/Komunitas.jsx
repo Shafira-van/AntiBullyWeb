@@ -1,7 +1,7 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from 'axios';
-import '../StyleSheet/Komunitas.css'
+import axios from "axios";
+import "../StyleSheet/Komunitas.css";
 function Komunitas() {
   const navigation = useNavigate();
   const [user, setUser] = useState([]);
@@ -11,60 +11,58 @@ function Komunitas() {
   useEffect(() => {
     async function getUser() {
       try {
-        const response = await axios.get('https://6350d871dfe45bbd55afb4ff.mockapi.io/MuseumAsia/komunitas');
-        setUser(response.data);        
+        const response = await axios.get(
+          "https://6350d871dfe45bbd55afb4ff.mockapi.io/MuseumAsia/komunitas"
+        );
+        setUser(response.data);
       } catch (error) {
         console.error(error);
       }
     }
     getUser();
-  }, [])
-  
+  }, []);
+
   function filterUser() {
     // console.log(user)
-    const x = user.filter(function(data) {
-      if(dataProvinsi === "" ){
-        return data
-      } else{
-        return data.provinsi === provinsi ? true : false
+    const x = user.filter(function (data) {
+      if (dataProvinsi === "") {
+        return data;
+      } else {
+        return data.provinsi === provinsi ? true : false;
       }
-    }) 
-    setDataProvinsi(x)
+    });
+    setDataProvinsi(x);
   }
 
   function filterOption() {
     user.map((item) => {
-        const x = item.provinsi
-        setOption(x)
-        // let uniqueProvinsi = x.filter((element, index) => {
-        //   return x.indexOf(element) === index;
-        // })
-    })
+      const x = item.provinsi;
+      setOption(x);
+      // let uniqueProvinsi = x.filter((element, index) => {
+      //   return x.indexOf(element) === index;
+      // })
+    });
 
-    console.log("ini option", option)
+    console.log("ini option", option);
 
-//     let chars = ['A', 'B', 'A', 'C', 'B'];
+    //     let chars = ['A', 'B', 'A', 'C', 'B'];
 
-// let uniqueChars = chars.filter((element, index) => {
-//     return chars.indexOf(element) === index;
-// });
-
-
-  }  
+    // let uniqueChars = chars.filter((element, index) => {
+    //     return chars.indexOf(element) === index;
+    // });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    filterUser()
-    filterOption()
-    console.log("ini data provinsi",dataProvinsi)
+    filterUser();
+    filterOption();
+    console.log("ini data provinsi", dataProvinsi);
+  };
 
-  }
+  // const handleDetail = (id) => {
+  //   navigation(`/DetailKomunitas/${id}`)
+  // }
 
-  const handleDetail = (id) => {
-    navigation(`/DetailKomunitas/${id}`)
-  }
-  
-  
   return (
     <div className="kontenKomponen">
       <div className="row">
@@ -117,11 +115,11 @@ function Komunitas() {
                         </div>
                       </div>
                       <div className="col-3 d-flex align-items-center justify-content-center">
-                        <button
-                          onClick={() => handleDetail(item.id)}
-                          className="btn btn-primary">
-                          Lihat
-                        </button>
+                        <Link
+                          to={`detailkomunitas/${item.id}`}
+                          className="nav-link">
+                          <button className="btn btn-primary">Lihat</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
