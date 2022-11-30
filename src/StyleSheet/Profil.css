@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 6vw 10vw;
+  margin: 1vw 10vw;
+  margin-top: 6vw;
   /* padding-bottom: 2vw; */
   /* border-bottom: #1366c3 1px solid; */
 }
@@ -254,6 +255,7 @@
   margin-top: 2vw;
   margin-left: 4vw;
   text-align: justify;
+  font-size: 2vw;
 }
 
 .ckeditprofil .ck.ck-editor {
