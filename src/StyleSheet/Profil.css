@@ -9,6 +9,7 @@
   /* padding-bottom: 2vw; */
   /* border-bottom: #1366c3 1px solid; */
 }
+
 /* .profil h1 {
   font-size: 3vw;
 } */
@@ -16,7 +17,7 @@
   font-size: 1vw;
 } */
 
-.isiprofil{
+.isiprofil {
   display: flex;
 }
 
@@ -45,28 +46,29 @@
   border: 1px solid #1366c3;
 }
 
-.profil .textProfil{
+.profil .textProfil {
   margin-left: 2vw;
   width: 50vw;
 }
-.profil .icon{
+
+.profil .icon {
   margin-top: 0.2vw;
 }
 
-.profil .icon h2{
+.profil .icon h2 {
   font-size: 3vw;
   font-weight: 600;
   /* color: #1366c3; */
   margin-bottom: 0;
 }
 
-.profil .icon span{
+.profil .icon span {
   margin-left: 0.6vw;
   font-size: 2.4vw;
 }
 
 /* komponen editprofil */
-.isieditProfil{
+.isieditProfil {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -74,19 +76,20 @@
   margin-bottom: 1vw;
 }
 
-.editing{
+.editing {
   display: flex;
   flex-direction: column;
 }
 
-.editing input{
+.editing input {
   width: 20vw;
   margin-top: 1.4vw;
   font-size: 1vw;
   background-color: transparent;
-  border:1px solid #1366c3;
+  border: 1px solid #1366c3;
 }
-.editprofil h1{
+
+.editprofil h1 {
   text-align: center;
   font-size: 3.8vw;
 }
@@ -94,11 +97,11 @@
 .isieditProfil img {
   width: 20vw;
   height: 23vw;
-  object-fit:cover;
+  object-fit: cover;
   border: 1px solid #1366c3;
 }
 
-.isieditProfil .textProfil{
+.isieditProfil .textProfil {
   margin-left: 4vw;
   display: flex;
   flex-direction: column;
@@ -106,21 +109,23 @@
 }
 
 
-.isieditProfil .form-floating input{
+.isieditProfil .form-floating input {
   width: 50vw;
   margin-bottom: 1.4vw;
   margin-top: 0vw;
   border: 1px solid #1366c3;
 }
+
 .isieditProfil .input-group span {
-  width: 4vw;
+  width: fit-content;
   /* margin-bottom: 1.4vw; */
   /* margin-top: 0vw; */
   border: 1px solid #1366c3;
 }
+
 .isieditProfil .input-group input {
-  width: 46vw;
-  padding-left: 0.2vw ;
+  width: 44vw;
+  padding-left: 0.2vw;
   border: 1px solid #1366c3;
 }
 
@@ -139,41 +144,61 @@
 }
 
 @media screen and (max-width: 610px) {
+  
   .isieditProfil .form-floating input {
-      width: 65vw;
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .isieditProfil .form-floating select {
+    width: 100%;
+    font-size: 3.2vw;
+    padding: 0 3vw;
+  }
+
+  .isieditProfil .form-floating label {
+    font-size: 3.2vw;
+  }
+
+    .isieditProfil .input-group span {
+      width: 20%;
       font-size: 3.6vw;
     }
-
-    .isieditProfil .form-floating select {
-      width: 65vw;
-      font-size: 3.6vw;
+  
+    .isieditProfil .input-group input {
+      width: 80%;
+      font-size: 3vw;
+      
     }
-
-        .isieditProfil .form-floating label {
-          font-size: 3.6vw;
-        }
+.ckeditprofil{
+      margin-left: 2vw;
+      padding: 0vw;
+    }
+    
 }
+
 /* user */
-.editprofiluser{
+.editprofiluser {
   display: flex;
   justify-content: center;
   margin-bottom: 2vw;
 }
 
-.editprofiluser button{
+.editprofiluser button {
   text-align: center;
   background-color: #1366c3;
+  margin-top: 2vw;
   width: fit-content;
   color: white;
   padding: 0.2vw 1.4vw;
   border-radius: 0.6vw;
-  border: 0px ;
-  font-size: 2.6vw;
+  border: 0px;
+  font-size: 2.2vw;
 }
 
 /* psikolog */
 
-.profilpsikolog{
+.profilpsikolog {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -182,7 +207,7 @@
   /* border-top: #1366c3 0.1px solid; */
 }
 
-.profilpsikolog h2{
+.profilpsikolog h2 {
   align-self: center;
   /* margin-left: 14vw; */
   margin-top: 0vw;
@@ -190,11 +215,13 @@
   /* color: #1366c3; */
 }
 
-.profilpsikolog table{
+.profilpsikolog table {
   width: 60vw;
 }
 
-.profilpsikolog table th,td,tr {
+.profilpsikolog table th,
+td,
+tr {
   font-size: 2.4vw;
 }
 
@@ -206,21 +233,23 @@
   margin-bottom: 2vw;
 }
 
-.editprofilpsikolog h2{
+.editprofilpsikolog h2 {
   font-size: 3.6vw;
   margin-top: 2vw;
   /* color: #1366c3; */
 }
 
-.editprofilpsikolog table{
+.editprofilpsikolog table {
   width: 60%;
 }
 
-.editprofilpsikolog table th,td,tr{
+.editprofilpsikolog table th,
+td,
+tr {
   font-size: 1.8vw;
 }
 
-.editprofilpsikolog table input{
+.editprofilpsikolog table input {
   border: 0px solid #1366c3;
   display: flex;
   width: 10vw;
@@ -229,29 +258,29 @@
 
 .editprofilpsikolog button {
   text-align: center;
-    background-color: #1366c3;
-    width: fit-content;
-    color: white;
-    padding: 0.2vw 1.4vw;
-    border-radius: 0.6vw;
-    border: 0px;
-    font-size: 2vw;
+  background-color: #1366c3;
+  width: fit-content;
+  color: white;
+  padding: 0.2vw 1.4vw;
+  border-radius: 0.6vw;
+  border: 0px;
+  font-size: 2vw;
 
 }
 
 #jadwal button {
   text-align: center;
-    background-color: #1366c3;
-    width: fit-content;
-    color: white;
-    padding: 0.2vw 1.4vw;
-    border-radius: 0.6vw;
-    border: 0px;
-    font-size: 2vw;
+  background-color: #1366c3;
+  width: fit-content;
+  color: white;
+  padding: 0.2vw 1.4vw;
+  border-radius: 0.6vw;
+  border: 0px;
+  font-size: 2vw;
 }
 
-.deskripsi{
-  align-self: flex-start ;
+.deskripsi {
+  align-self: flex-start;
   margin-top: 2vw;
   margin-left: 4vw;
   text-align: justify;
@@ -274,10 +303,10 @@
   /* border: #1366c3 1px solid; */
 }
 
-.ckeditprofil .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar{
+.ckeditprofil .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
   border: #1366c3 1px solid;
 }
 
-.ckeditprofil .ck.ck-toolbar .ck.ck-toolbar__separator{
-background-color: #1366c3;
+.ckeditprofil .ck.ck-toolbar .ck.ck-toolbar__separator {
+  background-color: #1366c3;
 }
