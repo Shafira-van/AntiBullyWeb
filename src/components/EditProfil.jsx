@@ -3,6 +3,8 @@ import "../StyleSheet/Profil.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProfil } from "../redux/action/profilAction";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 function EditProfil({
   id,
@@ -14,9 +16,8 @@ function EditProfil({
   alamat,
   gender,
   status,
+  deskripsi,
 }) {
-
-  
   const dispatch = useDispatch();
 
   const [editAvatar, setEditAvatar] = useState(img);
@@ -26,10 +27,11 @@ function EditProfil({
   const [editTempatkerja, setEditTempatkerja] = useState(tempatkerja);
   const [editAlamat, setEditAlamat] = useState(alamat);
   const [editGender, setEditGender] = useState(gender);
+  const [editDeskripsi, setEditDeskripsi] = useState(deskripsi);
+
   // const [editStatus, setEditStatus] = useState(status);
 
   const handleSubmit = (e) => {
-    
     e.preventDefault();
 
     dispatch(
@@ -41,10 +43,11 @@ function EditProfil({
         editNo,
         editTempatkerja,
         editAlamat,
-        editGender
+        editGender,
+        editDeskripsi
       )
     );
-    
+
     setEditAvatar("");
     setEditNama("");
     setEditEmail("");
@@ -52,10 +55,10 @@ function EditProfil({
     setEditTempatkerja("");
     setEditAlamat("");
     setEditGender("");
+    setEditDeskripsi("");
     // setEditStatus("");
 
     // console.log(img)
-
   };
 
   return (
@@ -98,7 +101,21 @@ function EditProfil({
               />
               <label htmlFor="floatingInputValue">Email</label>
             </div>
-            <div className="form-floating ">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                +62
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                value={editNo}
+                onChange={(e) => setEditNo(e.target.value)}
+              />
+            </div>
+            {/* <div className="form-floating ">
               <input
                 type="text"
                 className="form-control"
@@ -108,7 +125,7 @@ function EditProfil({
                 onChange={(e) => setEditNo(e.target.value)}
               />
               <label htmlFor="floatingInputValue">No Handphone</label>
-            </div>
+            </div> */}
             <div className="form-floating ">
               <input
                 type="text"
@@ -144,8 +161,33 @@ function EditProfil({
               </select>
               <label htmlFor="floatingSelect">{editGender}</label>
             </div>
+
+            <div className="ckeditprofil">
+              <CKEditor
+                style={{
+                  width: "80vw",
+                }}
+                editor={ClassicEditor}
+                data={editDeskripsi}
+                onReady={(editor) => {
+                  // You can store the "editor" and use when it is needed.
+                  // console.log("Editor is ready to use!", editor);
+                }}
+                onChange={(event, editor) => {
+                  const data = editor.getData();
+                  setEditDeskripsi(data);
+                }}
+                onBlur={(event, editor) => {
+                  // console.log("Blur.", editor);
+                }}
+                onFocus={(event, editor) => {
+                  // console.log("Focus.", editor);
+                }}
+              />
+            </div>
           </div>
         </div>
+
         <div className="editprofiluser">
           <button>Simpan</button>
         </div>

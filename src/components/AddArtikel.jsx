@@ -40,9 +40,9 @@ function AddArtikel() {
         <div className="isi">
           <label htmlFor="Isi Artikel">IsiArtikel</label>
           <CKEditor
-            style={{
-              width: "80vw",
-            }}
+            // style={{
+            //   width: "80vw",
+            // }}
             editor={ClassicEditor}
             data=""
             onReady={(editor) => {

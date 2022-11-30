@@ -32,6 +32,7 @@ function EditProfilPsikolog() {
                 alamat={item.alamat}
                 gender={item.gender}
                 status={item.status}
+                deskripsi={item.deskripsi}
               />
             </>
           );

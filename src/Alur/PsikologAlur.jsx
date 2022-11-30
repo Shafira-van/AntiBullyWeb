@@ -20,10 +20,12 @@ import NavbarPsikolog from "../pages/NavbarPsikolog";
 import Komunitas from '../pages/Komunitas';
 import DetailKomunitas from '../pages/DetailKomunitas';
 import OutletKomunitas from "../pages/OutletKomunitas";
+import DetailPsikolog from "../components/DetailPsikolog";
+import OutletPsikolog from "../pages/OutletPsikolog";
 
 function PsikologAlur() {
   return (
-    <div className='kontenKomponen'>
+    <div className="kontenKomponen">
       <NavbarPsikolog />
       <Routes>
         <Route path="/komunitas" element={<Komunitas />} />
@@ -39,7 +41,10 @@ function PsikologAlur() {
         </Route>
         {/* <Route path="/komunitas" element={} /> */}
         <Route path="/diskusi" element={<Diskusi />} />
-        <Route path="/psikolog" element={<Psikolog />} />
+        <Route path="/psikolog" element={<OutletPsikolog />}>
+          <Route index element={<Psikolog />} />
+          <Route path="detailpsikolog/:id" element={<DetailPsikolog />} />
+        </Route>
         <Route path="/faq" element={<Faq />} />
         <Route path="/profil" element={<Profil />}>
           <Route index element={<ProfilPsikolog />} />
