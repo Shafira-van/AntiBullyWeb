@@ -64,46 +64,6 @@ function Login() {
     setUsername("");
     setPassword("");
   };
-
-  // return (
-  //   <div>
-  //     {/* <User/> */}
-  //     <form onSubmit={handleSubmit}>
-  //       <div className="mb-3 row">
-  //         <label htmlFor="staticEmail" className="col-sm-2 col-form-label">
-  //           Username
-  //         </label>
-  //         <div className="col-sm-10">
-  //           <input
-  //             type="text"
-  //             className="form-control"
-  //             id="staticEmail"
-  //             value={username}
-  //             onChange={(e) => setUsername(e.target.value)}
-  //           />
-  //         </div>
-  //       </div>
-  //       <div className="mb-3 row">
-  //         <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
-  //           Password
-  //         </label>
-  //         <div className="col-sm-10">
-  //           <input
-  //             type="password"
-  //             className="form-control"
-  //             id="inputPassword"
-  //             value={password}
-  //             onChange={(e) => setPassword(e.target.value)}
-  //           />
-  //         </div>
-  //       </div>
-  //       <button type="submit" className="btn btn-primary mb-3">
-  //         submit
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
-
   return ( 
     <>
     <div className="row">
