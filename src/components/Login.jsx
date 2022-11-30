@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import pic from '../Asset/Login/picture.png'
 import '../StyleSheet/Login.css'
 import logo from '../Asset/Navbar/LOGO.gif'
-// import '../StyleSheet/Login.css'
+import '../StyleSheet/Login.css'
 import PsikologAlur from "../Alur/PsikologAlur";
 import User from "../Alur/User";
 import { Link } from "react-router-dom";
@@ -61,13 +61,6 @@ function Login() {
       });
   }
 
-<<<<<<< HEAD
-    setUsername("");
-    setPassword("");
-  };
-  return ( 
-    <>
-=======
 
   setUsername("");
   setPassword("");
@@ -114,7 +107,6 @@ function Login() {
 
 return (
   <>
->>>>>>> dev
     <div className="row">
       <div className="form-register col-lg-7 col-md-7 vh-100">
         <div className="row d-flex align-items-center vh-100 ">
@@ -122,7 +114,7 @@ return (
             <div className="logo text-center ">
               <img className="mx-auto" src={logo} alt="" />
             </div>
-            <h3 className='text-center'>Register</h3>
+            <h3 className='text-center'>LOGIN</h3>
             <form onSubmit={handleSubmit}>
               <div class="input-value mb-3">
                 <label for="InputUsername" class="form-label">Username</label>
@@ -136,6 +128,11 @@ return (
                 <button class="btn btn-light">Masuk</button>
               </div>
             </form>
+            <div className="come-register text-center mt-2">
+            <Link className="text-decoration-none" to={`/register`}>
+              <h6 className="text-decoration-none">Belum punya akun? <b>Daftar disini</b></h6>
+            </Link>
+            </div>
           </div>
         </div>
       </div>

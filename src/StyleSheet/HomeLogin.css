@@ -1,0 +1,12 @@
+.img-nav img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+.btn-login button{
+    background-color: #1366C3;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    border: none;
+}

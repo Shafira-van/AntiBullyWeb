@@ -4,6 +4,17 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 25px;
 }
 
+.come-register h6{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.come-register Link{
+    text-decoration: none;
+}
+
 .kolom-register h3{
     font-weight: 800;
     color: white;
