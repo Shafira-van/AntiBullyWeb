@@ -319,11 +319,23 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .detailArtikel p {
-  font-size: 2.2vw;
+  margin-top: 2vw;
+  font-size: 1.6vw;
   text-align: justify;
 }
 
 /* add artikel */
+.btnAddArtikel{
+  height: 4vw;
+  margin: 2vw 6vw;
+  padding: 0 0.6vw;
+  font-weight: 600;
+  font-size: 1.6vw;
+  background-color: #1366c3;
+  color: white;
+  border: 0;
+  border-radius: 0.4vw;
+}
 .artikelForm {
   width: 100%;
   display: flex;
@@ -343,17 +355,18 @@ font-family: 'Poppins', sans-serif; */
   display: flex;
   flex-direction: column;
   /* margin-left: 12vw */
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
 
 .artikelForm .judul input {
   width: 80vw;
   padding: 0.4vw 1vw;
+  font-size: 1.6vw;
   border: rgb(151, 149, 149) 1px solid;
 }
 
 .artikelForm .isi {
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
 
 
@@ -361,11 +374,12 @@ font-family: 'Poppins', sans-serif; */
   align-self: center;
   display: flex;
   flex-direction: column;
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
 
 .artikelForm .cover input {
   width: 80vw;
+  font-size: 1.6vw;
   border: rgb(151, 149, 149) 1px solid;
 }
 
@@ -386,7 +400,7 @@ font-family: 'Poppins', sans-serif; */
 
 .ck.ck-editor {
   width: 80vw;
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 .ck.ck-toolbar {
@@ -394,7 +408,7 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 
