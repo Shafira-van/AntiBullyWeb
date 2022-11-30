@@ -16,10 +16,12 @@ import DetailKomunitas from "../pages/DetailKomunitas";
 import Login from "../components/Login";
 import NavbarUser from "../pages/NavbarUser";
 import OutletKomunitas from "../pages/OutletKomunitas";
+import OutletPsikolog from "../pages/OutletPsikolog";
+import DetailPsikolog from "../components/DetailPsikolog";
 
 function User() {
   return (
-    <div className='kontenKomponen'>
+    <div className="kontenKomponen">
       <NavbarUser />
       <Routes>
         {/* <Route path="/userlogin" element={<Login />} /> */}
@@ -34,6 +36,10 @@ function User() {
         </Route>
         <Route path="/diskusi" element={<Diskusi />} />
         <Route path="/psikolog" element={<Psikolog />} />
+        <Route path="/psikolog" element={<OutletPsikolog />}>
+          <Route index element={<Psikolog />} />
+          <Route path="detailpsikolog/:id" element={<DetailPsikolog />} />
+        </Route>
         <Route path="/faq" element={<Faq />} />
         <Route path="profil" element={<Profil />}>
           <Route index element={<ProfilUser />} />

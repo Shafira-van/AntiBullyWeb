@@ -9,7 +9,7 @@ import { getProfil } from "../redux/action/profilAction";
 
 
 
-function Profil({ id, img, nama, email, no, tempatkerja, alamat, gender }) {
+function Profil({ id, img, nama, email, no, tempatkerja, alamat, gender,deskripsi }) {
   
   
 
@@ -25,20 +25,19 @@ function Profil({ id, img, nama, email, no, tempatkerja, alamat, gender }) {
 
   return (
     <div key={id}>
-      <div className="profil" >
-        <div className="isiprofil" >
+      <div className="profil">
+        <div className="isiprofil">
           <div className="imgprofil">
-            <img src={img} className="img-thumbnail" alt="..." /> 
-           {!editProfil && (
+            <img src={img} className="img-thumbnail" alt="..." />
+            {!editProfil && (
               <div id="more">
                 <Link
                   to={`editprofil/${id}/${nama}`}
                   onClick={() => setEditProfil(true)}>
-                  <button >Edit Profil</button>
+                  <button>Edit Profil</button>
                 </Link>
               </div>
             )}
-
           </div>
           <div className="textProfil">
             <div id="nama" className="icon">
@@ -54,29 +53,25 @@ function Profil({ id, img, nama, email, no, tempatkerja, alamat, gender }) {
             </div>
             <div id="noHandphone" className="icon">
               <Icon icon="fxemoji:lefthandphone" width="3vw" height="3vw" />
-              <span>{no}</span>
+              <span>+62{no}</span>
             </div>
-            <div id="noHandphone" className="icon">
-              <Icon
-                icon="ic:baseline-work-history"
-                width="3vw"
-                height="3vw"
-              />
+            <div id="tempatkerja" className="icon">
+              <Icon icon="ic:baseline-work-history" width="3vw" height="3vw" />
               <span>{tempatkerja}</span>
             </div>
-            <div id="noHandphone" className="icon">
+            <div id="alamat" className="icon">
               <Icon icon="ph:address-book" width="3vw" height="3vw" />
               <span>{alamat}</span>
             </div>
-            <div id="noHandphone" className="icon">
-              <Icon
-                icon="ph:gender-intersex-bold"
-                width="3vw"
-                height="3vw"
-              />
+            <div id="gender" className="icon">
+              <Icon icon="ph:gender-intersex-bold" width="3vw" height="3vw" />
               <span>{gender}</span>
             </div>
           </div>
+        </div>
+        <div id="deskripsi" className="deskripsi">
+          {/* <Icon icon="ph:gender-intersex-bold" width="3vw" height="3vw" /> */}
+          <span dangerouslySetInnerHTML={{ __html: deskripsi }}></span>
         </div>
       </div>
     </div>

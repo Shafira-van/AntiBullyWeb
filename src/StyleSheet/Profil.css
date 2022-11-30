@@ -111,6 +111,17 @@
   margin-top: 0vw;
   border: 1px solid #1366c3;
 }
+.isieditProfil .input-group span {
+  width: 4vw;
+  /* margin-bottom: 1.4vw; */
+  /* margin-top: 0vw; */
+  border: 1px solid #1366c3;
+}
+.isieditProfil .input-group input {
+  width: 46vw;
+  padding-left: 0.2vw ;
+  border: 1px solid #1366c3;
+}
 
 .isieditProfil .form-floating select {
   width: 50vw;
@@ -173,7 +184,7 @@
 .profilpsikolog h2{
   align-self: center;
   /* margin-left: 14vw; */
-  margin-top: 2vw;
+  margin-top: 0vw;
   font-size: 4vw;
   /* color: #1366c3; */
 }
@@ -186,7 +197,7 @@
   font-size: 2.4vw;
 }
 
-.editprofilpsikolog {
+.editprofil {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,4 +247,35 @@
     border-radius: 0.6vw;
     border: 0px;
     font-size: 2vw;
+}
+
+.deskripsi{
+  align-self: flex-start ;
+  margin-top: 2vw;
+  margin-left: 4vw;
+  text-align: justify;
+}
+
+.ckeditprofil .ck.ck-editor {
+  width: 50vw;
+  font-size: 1.4vw;
+  border: #1366c3 1px solid;
+}
+
+.ckeditprofil .ck.ck-toolbar {
+  font-size: 1.4vw;
+  /* border: #1366c3 1px solid; */
+}
+
+.ckeditprofil.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  font-size: 1.4vw;
+  /* border: #1366c3 1px solid; */
+}
+
+.ckeditprofil .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar{
+  border: #1366c3 1px solid;
+}
+
+.ckeditprofil .ck.ck-toolbar .ck.ck-toolbar__separator{
+background-color: #1366c3;
 }

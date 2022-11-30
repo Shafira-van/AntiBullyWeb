@@ -64,6 +64,7 @@ export const addProfil = (nama, email, password, status, jadwalpraktek) => {
         status: status,
         password: password,
         jadwalpraktek: jadwalpraktek,
+        deskripsi:""
       }
     )
     dispatch(successAddProfil(result.data))
@@ -79,13 +80,13 @@ function successUpdateProfil(data) {
   }
 }
 
-export const updateProfil = (id, avatar, nama, email, no, tempatkerja, alamat, gender) => {
+export const updateProfil = (id, avatar, nama, email, no, tempatkerja, alamat, gender, deskripsi) => {
   console.log(avatar);
 
   return async (dispatch) => {
 
     const result = await axios.put(
-      `https://63819b489842ca8d3c9642d0.mockapi.io/user/${id}`, { avatar: avatar, nama: nama, email: email, no: no, tempatkerja: tempatkerja, alamat: alamat, gender: gender }
+      `https://63819b489842ca8d3c9642d0.mockapi.io/user/${id}`, { avatar: avatar, nama: nama, email: email, no: no, tempatkerja: tempatkerja, alamat: alamat, gender: gender ,deskripsi:deskripsi}
     )
     dispatch(successUpdateProfil(result.data))
     console.log(result.data)
