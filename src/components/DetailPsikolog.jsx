@@ -96,10 +96,10 @@ function DetailPsikolog() {
             return (
               <div className="container detaiPsikolog mt-3 mb-3">
                 <div className="detail-psikolog row mx-auto">
-                  <div className="col-lg-3 col-md-3 col-7 mx-auto">
-                    <img className="img-fluid" src={item.avatar} alt="" />
+                  <div className="col-lg-3 col-md-5 col-7 mx-auto">
+                    <img className="mt-3 img-fluid" src={item.avatar} alt="" />
                   </div>
-                  <div className="psikolog-name col-lg-7 col-md-7 col-12 m-3">
+                  <div className="psikolog-name col-lg-7 col-md-6 col-12 m-3">
                     <table>
                       <tr>
                         <td className="icon-psikolog p-3">
