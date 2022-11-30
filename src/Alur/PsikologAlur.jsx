@@ -22,6 +22,7 @@ import DetailKomunitas from '../pages/DetailKomunitas';
 import OutletKomunitas from "../pages/OutletKomunitas";
 import DetailPsikolog from "../components/DetailPsikolog";
 import OutletPsikolog from "../pages/OutletPsikolog";
+import AddArtikelPsikolog from "../pages/AddArtikelPsikolog";
 
 function PsikologAlur() {
   return (
@@ -32,11 +33,13 @@ function PsikologAlur() {
         <Route path="/komunitas" element={<OutletKomunitas />}>
           <Route index element={<Komunitas />} />
           <Route path="detailkomunitas/:id" element={<DetailKomunitas />} />
+          
         </Route>
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomePsikolog />} />
         <Route path="/artikel" element={<Artikel />}>
           <Route index element={<ArtikelPsikolog />} />
+          <Route path="addartikel" element={<AddArtikelPsikolog />} />
           <Route path="detailartikel/:id/:judul" element={<DetailArtikel />} />
         </Route>
         {/* <Route path="/komunitas" element={} /> */}

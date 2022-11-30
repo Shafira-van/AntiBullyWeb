@@ -108,7 +108,7 @@ function Navbar({ admin, id }) {
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <img
-                      src="https://assets.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png?t=o&v=770"
+                      src={item.avatar}
                       alt=""
                     />
                     {item.nama}

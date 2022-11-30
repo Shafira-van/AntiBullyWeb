@@ -66,6 +66,7 @@ export const addProfil = (nama, email, password, status, jadwalpraktek) => {
         jadwalpraktek: jadwalpraktek,
         deskripsi:""
       }
+
     )
     dispatch(successAddProfil(result.data))
     console.log(result.data);
@@ -88,10 +89,11 @@ export const updateProfil = (id, avatar, nama, email, no, tempatkerja, alamat, g
     const result = await axios.put(
       `https://63819b489842ca8d3c9642d0.mockapi.io/user/${id}`, { avatar: avatar, nama: nama, email: email, no: no, tempatkerja: tempatkerja, alamat: alamat, gender: gender ,deskripsi:deskripsi}
     )
+    alert("data berhasil di update")
     dispatch(successUpdateProfil(result.data))
+    
     console.log(result.data)
     // window.location = "/user/profil";
-    alert("data berhasil di update")
   }
 }
 
@@ -110,9 +112,10 @@ export const updateJadwal = (id, jadwalpraktek) => {
 
       `https://63819b489842ca8d3c9642d0.mockapi.io/user/${id}`, { jadwalpraktek: jadwalpraktek}
     )
+    alert("data berhasil di update")
     dispatch(successUpdateJadwal(result.data))
     console.log(result.data)
     // window.location = "/profil";
-    alert("data berhasil di update")
+    
   }
 }

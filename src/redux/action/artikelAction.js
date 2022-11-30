@@ -40,6 +40,8 @@ export const addArtikel = (judul, isi, img) => {
       "https://63819b489842ca8d3c9642d0.mockapi.io/Article",
       {judul,isi,img}
     )
+    alert("data berhasil di tambahkan")
     dispatch(successAddArtikel(result.data))
+    // window.location = `/artikel`;
   }
 }

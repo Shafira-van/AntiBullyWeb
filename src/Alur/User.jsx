@@ -18,6 +18,7 @@ import NavbarUser from "../pages/NavbarUser";
 import OutletKomunitas from "../pages/OutletKomunitas";
 import OutletPsikolog from "../pages/OutletPsikolog";
 import DetailPsikolog from "../components/DetailPsikolog";
+import AddArtikel from "../components/AddArtikel";
 
 function User() {
   return (
