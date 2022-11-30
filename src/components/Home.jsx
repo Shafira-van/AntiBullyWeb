@@ -11,10 +11,10 @@ function Home({ admin, id }) {
       />
       <div className="header">
         <h1>Our Mission</h1>
-        <h2>
-          Your <b>Smile</b> Beautifies The <b>World</b>
+        <h2 className="mt-2">
+          Your <span>Smile</span> Beautifies The <span>world</span>
         </h2>
-        <p>
+        <p className="mt-3">
           Ayo hentikan budaya bully di Indonesia, mari kita bangkit bersama
           bangun Indonesia lebih maju.
         </p>
@@ -28,7 +28,7 @@ function Home({ admin, id }) {
       <div className="kontenHome">
         <div className="textKonten">
           <h3>
-            <b>Butuh Teman Cerita?</b>
+            Butuh Teman Cerita?
           </h3>
           <p>Lihat daftar psikolog yang tersedia dan hubungi melalui wa</p>
           <Link to={`${admin}/${id}/psikolog`}>
@@ -44,7 +44,7 @@ function Home({ admin, id }) {
         <div className="row">
           <div className="col-5 " id="col1">
             <h3>
-              <b>Membutuhkan bantuan?</b>
+              Membutuhkan bantuan?
             </h3>
             <p>Lihat daftar komunitas yang dapat membantu anda</p>
             <Link to={`${admin}/${id}/komunitas`}>
@@ -53,7 +53,7 @@ function Home({ admin, id }) {
           </div>
           <div className="col-5" id="col2">
             <h3>
-              <b>Berbagi Pengalaman dengan user lain</b>
+              Berbagi Pengalaman dengan user lain
             </h3>
             <p>Ceritakan pengalamanmu atau masalahmu di forum diskusi</p>
             <Link to={`${admin}/${id}/diskusi`}>

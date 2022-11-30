@@ -1,0 +1,32 @@
+.kolom-register {
+    background: #1366C3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+.kolom-register h3{
+    font-weight: 800;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-value label{
+    font-weight: 400;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-input-value button{
+    font-weight: 400;
+    color: #1366C3;
+}
+
+.logo img{
+    width: 20%;
+    height: auto;
+}
+
+.kolom-register img{
+    width: 20%;
+    height: auto;
+}
