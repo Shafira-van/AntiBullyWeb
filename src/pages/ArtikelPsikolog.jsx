@@ -9,7 +9,7 @@ function ArtikelPsikolog() {
   
 
   return (
-    <div className="kontenKomponen">
+    <div className="container kontenKomponen mt-3">
       <Link to={`addartikel`}>
         <button className="btnAddArtikel">Add Artikel+</button>
       </Link>
