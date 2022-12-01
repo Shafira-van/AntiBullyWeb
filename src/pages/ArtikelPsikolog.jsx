@@ -9,9 +9,9 @@ function ArtikelPsikolog() {
   
 
   return (
-    <div className="container kontenKomponen mt-3">
+    <div className="add-Artikel container kontenKomponen mt-3">
       <Link to={`addartikel`}>
-        <button className="btnAddArtikel">Add Artikel+</button>
+        <button class="btn btn-primary">Add Artikel</button>
       </Link>
       <Artikel />
     </div>
