@@ -32,7 +32,7 @@ function Home({ admin, id }) {
           </h3>
           <p>Lihat daftar psikolog yang tersedia dan hubungi melalui wa</p>
           <Link to={`${admin}/${id}/psikolog`}>
-             <button type="button" class="btn btn-primary">Primary</button>
+             <button class="btn btn-primary">Psikolog</button>
           </Link>
         </div>
         <img
@@ -48,7 +48,7 @@ function Home({ admin, id }) {
             </h3>
             <p>Lihat daftar komunitas yang dapat membantu anda</p>
             <Link to={`${admin}/${id}/komunitas`}>
-              <button type="button" class="btn btn-primary">Komunitas</button>
+              <button class="btn btn-primary">Komunitas</button>
             </Link>
           </div>
           <div className="col-5" id="col2">
@@ -57,7 +57,7 @@ function Home({ admin, id }) {
             </h3>
             <p>Ceritakan pengalamanmu atau masalahmu di forum diskusi</p>
             <Link to={`${admin}/${id}/diskusi`}>
-            <button type="button" class="btn btn-primary">Diskusi</button>
+            <button class="btn btn-primary">Diskusi</button>
             </Link>
           </div>
         </div>
