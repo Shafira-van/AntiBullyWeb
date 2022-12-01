@@ -19,7 +19,6 @@ function Psikolog() {
   }, []);
 
   return (
-    <div className="kontenKomponen">
       <div className="Psikolog mb-3">
         <div className="container d-flex flex-column">
           {isLoading ? (
@@ -63,7 +62,6 @@ function Psikolog() {
             }))}
         </div>
       </div>
-    </div>
   );
 }
 
