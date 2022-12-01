@@ -6,7 +6,7 @@ import { updateJadwal } from "../redux/action/profilAction";
 
 function EditJadwalPraktek({ id, senin, selasa, rabu, kamis, jumat }) {
   const dispatch = useDispatch();
-  console.log(senin)
+  console.log(senin);
   const [editSeninBuka, setEditSeninBuka] = useState(senin.buka);
   const [editSelasaBuka, setEditSelasaBuka] = useState(selasa.buka);
   const [editRabuBuka, setEditRabuBuka] = useState(rabu.buka);
@@ -18,45 +18,36 @@ function EditJadwalPraktek({ id, senin, selasa, rabu, kamis, jumat }) {
   const [editKamisTutup, setEditKamisTutup] = useState(kamis.tutup);
   const [editJumatTutup, setEditJumatTutup] = useState(jumat.tutup);
   let [jadwalpraktek, setJadwalPraktek] = useState("");
-  
 
-      jadwalpraktek = {
-        senin: {
-          buka: editSeninBuka,
-          tutup: editSeninTutup
-        },
-        selasa: {
-          buka: editSelasaBuka,
-          tutup: editSelasaTutup
-        },
-        rabu: {
-          buka: editRabuBuka,
-          tutup: editRabuTutup
-        },
-        kamis: {
-          buka: editKamisBuka,
-          tutup: editKamisTutup
-        },
-        jumat: {
-          buka: editJumatBuka,
-          tutup: editJumatTutup
-        }
-      }
+  jadwalpraktek = {
+    senin: {
+      buka: editSeninBuka,
+      tutup: editSeninTutup,
+    },
+    selasa: {
+      buka: editSelasaBuka,
+      tutup: editSelasaTutup,
+    },
+    rabu: {
+      buka: editRabuBuka,
+      tutup: editRabuTutup,
+    },
+    kamis: {
+      buka: editKamisBuka,
+      tutup: editKamisTutup,
+    },
+    jumat: {
+      buka: editJumatBuka,
+      tutup: editJumatTutup,
+    },
+  };
 
   console.log(jadwalpraktek);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-
-
-    dispatch(
-      updateJadwal(
-        id,
-        jadwalpraktek
-      )
-    );
+    dispatch(updateJadwal(id, jadwalpraktek));
 
     setEditSeninBuka("");
     setEditSelasaBuka("");
@@ -74,21 +65,34 @@ function EditJadwalPraktek({ id, senin, selasa, rabu, kamis, jumat }) {
       <form onSubmit={handleSubmit}>
         <div className="editprofilpsikolog">
           <h2>Jadwal Konsultasi</h2>
+          <h6>Masukkan Jadwal dengan Waktu WIB</h6>
           <table className="table table-bordered">
             <thead>
               <tr className="table-primary">
-                <th scope="col">#</th>
-                <th scope="col">Senin</th>
-                <th scope="col">Selasa</th>
-                <th scope="col">Rabu</th>
-                <th scope="col">Kamis</th>
-                <th scope="col">Jumat</th>
+                <th scope="col">
+                  <h6>#</h6>
+                </th>
+                <th scope="col">
+                  <h6>Senin</h6>
+                </th>
+                <th scope="col">
+                  <h6>Selasa</h6>
+                </th>
+                <th scope="col">
+                  <h6>Rabu</h6>
+                </th>
+                <th scope="col">
+                  <h6>Kamis</h6>
+                </th>
+                <th scope="col">
+                  <h6>Jumat</h6>
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row" className="table-primary">
-                  Buka
+                  <h6>Buka</h6>
                 </th>
                 <td>
                   <input
@@ -128,7 +132,7 @@ function EditJadwalPraktek({ id, senin, selasa, rabu, kamis, jumat }) {
               </tr>
               <tr>
                 <th scope="row" className="table-primary">
-                  Tutup
+                  <h6>Tutup</h6>
                 </th>
                 <td>
                   <input
@@ -168,10 +172,152 @@ function EditJadwalPraktek({ id, senin, selasa, rabu, kamis, jumat }) {
               </tr>
             </tbody>
           </table>
-          <button>Simpan</button>
+          <div className="button-edit p-3">
+            <button class="btn btn-primary">Simpan Perubahan</button>
+          </div>
         </div>
       </form>
     </div>
+
+    // <div>
+    //   <div className="profilpsikolog">
+    //     <h4>Jadwal Konsultasi</h4>
+    //     <table className="table table-bordered">
+    //       <thead>
+    //         <tr className="table-primary">
+    //           <th scope="col">
+    //             <h6>#</h6>
+    //           </th>
+    //           <th scope="col">
+    //             <h6>Senin</h6>
+    //           </th>
+    //           <th scope="col">
+    //             <h6>Selasa</h6>
+    //           </th>
+    //           <th scope="col">
+    //             <h6>Rabu</h6>
+    //           </th>
+    //           <th scope="col">
+    //             <h6>Kamis</h6>
+    //           </th>
+    //           <th scope="col">
+    //             <h6>Jumat</h6>
+    //           </th>
+    //         </tr>
+    //       </thead>
+    //       <tbody>
+    //         <tr>
+    //           <th scope="row" className="table-primary">
+    //             <h6>Buka</h6>
+    //           </th>
+    //           <td>
+    //             <h6>
+    //               {" "}
+    //               <input
+    //                 type="text"
+    //                 value={editSeninBuka}
+    //                 onChange={(e) => setEditSeninBuka(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //               {" "}
+    //               <input
+    //                 type="text"
+    //                 value={editSelasaBuka}
+    //                 onChange={(e) => setEditSelasaBuka(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //               <input
+    //                 type="text"
+    //                 value={editRabuBuka}
+    //                 onChange={(e) => setEditRabuBuka(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //               <input
+    //                 type="text"
+    //                 value={editKamisBuka}
+    //                 onChange={(e) => setEditKamisBuka(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //               <input
+    //                 type="text"
+    //                 value={editJumatBuka}
+    //                 onChange={(e) => setEditJumatBuka(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //         </tr>
+    //         <tr>
+    //           <th scope="row" className="table-primary">
+    //             <h6>Tutup</h6>
+    //           </th>
+    //           <td>
+    //             <h6> <input
+    //                 type="text"
+    //                 value={editSeninTutup}
+    //                 onChange={(e) => setEditSeninTutup(e.target.value)}
+    //               /></h6>
+    //           </td>
+    //           <td>
+    //             <h6><input
+    //                 type="text"
+    //                 value={editSelasaTutup}
+    //                 onChange={(e) => setEditSelasaTutup(e.target.value)}
+    //               /></h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //             <input
+    //                 type="text"
+    //                 value={editRabuTutup}
+    //                 onChange={(e) => setEditRabuTutup(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //             <input
+    //                 type="text"
+    //                 value={editKamisTutup}
+    //                 onChange={(e) => setEditKamisTutup(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //           <td>
+    //             <h6>
+    //             <input
+    //                 type="text"
+    //                 value={editJumatTutup}
+    //                 onChange={(e) => setEditJumatTutup(e.target.value)}
+    //               />
+    //             </h6>
+    //           </td>
+    //         </tr>
+    //       </tbody>
+    //     </table>
+    //     {!editJadwal && (
+    //       <div id="jadwal">
+    //         <Link
+    //           to={`editjadwal/${id}/${nama}`}
+    //           onClick={() => setEditJadwal(true)}
+    //         >
+    //           <button className="btn btn-primary p-2">Edit Jadwal</button>
+    //         </Link>
+    //       </div>
+    //     )}
+    //   </div>
+    // </div>
   );
 }
 

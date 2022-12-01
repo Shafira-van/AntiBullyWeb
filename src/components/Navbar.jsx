@@ -100,7 +100,7 @@ function Navbar({ admin, id }) {
             .filter((item) => item.id === id)
             .map((item) => {
               return (
-                <div className="dropdown Account d-none d-lg-block">
+                <div className="profil dropdown Account d-none d-lg-block">
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
@@ -115,20 +115,20 @@ function Navbar({ admin, id }) {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <CustomLink
+                      <Link
                         to={`${admin}/${id}/profil`}
                         className="dropdown-item"
                         href="#">
                         Profil
-                      </CustomLink>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <CustomLink to="/" className="dropdown-item" href="#">
+                      <Link to="/" className="dropdown-item" href="#">
                         Log Out
-                      </CustomLink>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -1,0 +1,72 @@
+.profil-user {
+    width: 70%;
+}
+
+.foto-profil img {
+    width: 50%;
+    height: auto;
+}
+
+.icon-desc img {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-desc {
+    width: 15%;
+}
+
+.desc-table table tr td h6 {
+    font-weight: 400;
+}
+
+#more button {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+}
+
+#more button:hover {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+}
+
+.profilpsikolog h4 {
+    font-weight: 600;
+    color: #1366C3;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+}
+
+#jadwal button {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: white;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+    
+}
+
+#jadwal button:hover {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+}

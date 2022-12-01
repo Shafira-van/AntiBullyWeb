@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../StyleSheet/Profil.css";
+import "../StyleSheet/pageProfil.css";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link, Outlet, useMatch, useResolvedPath } from "react-router-dom";
@@ -12,38 +12,70 @@ function JadwalPraktek({ id,nama, senin, selasa, rabu, kamis, jumat }) {
   return (
     <div>
       <div className="profilpsikolog">
-        <h2>Jadwal Konsultasi</h2>
+        <h4>Jadwal Konsultasi</h4>
         <table className="table table-bordered">
           <thead>
             <tr className="table-primary">
-              <th scope="col">#</th>
-              <th scope="col">Senin</th>
-              <th scope="col">Selasa</th>
-              <th scope="col">Rabu</th>
-              <th scope="col">Kamis</th>
-              <th scope="col">Jumat</th>
+              <th scope="col">
+                <h6>#</h6>
+              </th>
+              <th scope="col">
+                <h6>Senin</h6>
+              </th>
+              <th scope="col">
+                <h6>Selasa</h6>
+              </th>
+              <th scope="col">
+                <h6>Rabu</h6>
+              </th>
+              <th scope="col">
+                <h6>Kamis</h6>
+              </th>
+              <th scope="col">
+                <h6>Jumat</h6>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row" className="table-primary">
-                Buka
+                <h6>Buka</h6>
               </th>
-              <td>{senin.buka}</td>
-              <td>{selasa.buka}</td>
-              <td>{rabu.buka}</td>
-              <td>{kamis.buka}</td>
-              <td>{jumat.buka}</td>
+              <td>
+                <h6>{senin.buka}</h6>
+              </td>
+              <td>
+                <h6>{selasa.buka}</h6>
+              </td>
+              <td>
+                <h6>{rabu.buka}</h6>
+              </td>
+              <td>
+                <h6>{kamis.buka}</h6>
+              </td>
+              <td>
+                <h6>{jumat.buka}</h6>
+              </td>
             </tr>
             <tr>
               <th scope="row" className="table-primary">
-                Tutup
+                <h6>Tutup</h6>
               </th>
-              <td>{senin.tutup}</td>
-              <td>{selasa.tutup}</td>
-              <td>{rabu.tutup}</td>
-              <td>{kamis.tutup}</td>
-              <td>{jumat.tutup}</td>
+              <td>
+                <h6>{senin.tutup}</h6>
+              </td>
+              <td>
+                <h6>{selasa.tutup}</h6>
+              </td>
+              <td>
+                <h6>{rabu.tutup}</h6>
+              </td>
+              <td>
+                <h6>{kamis.tutup}</h6>
+              </td>
+              <td>
+                <h6>{jumat.tutup}</h6>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -52,7 +84,7 @@ function JadwalPraktek({ id,nama, senin, selasa, rabu, kamis, jumat }) {
             <Link
               to={`editjadwal/${id}/${nama}`}
               onClick={() => setEditJadwal(true)}>
-              <button>Edit Jadwal</button>
+              <button className="btn btn-primary p-2">Edit Jadwal</button>
             </Link>
           </div>
         )}

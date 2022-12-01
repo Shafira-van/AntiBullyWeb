@@ -16,24 +16,24 @@ function Register() {
 
   jadwalpraktek = {
     senin: {
-      buka: "",
-      tutup: "",
+      buka: " - ",
+      tutup: " - ",
     },
     selasa: {
-      buka: "",
-      tutup: "",
+      buka: " - ",
+      tutup: " - ",
     },
     rabu: {
-      buka: "",
-      tutup: "",
+      buka: " - ",
+      tutup: " - ",
     },
     kamis: {
-      buka: "",
-      tutup: "",
+      buka: " - ",
+      tutup: " - ",
     },
     jumat: {
-      buka: "",
-      tutup: "",
+      buka: " - ",
+      tutup: " - ",
     },
   };
 

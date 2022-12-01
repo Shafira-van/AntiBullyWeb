@@ -8,30 +8,6 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 
 function Psikolog() {
-
-  // const [psikolog, setPsikolog] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-
-  //     axios.get('https://6350d871dfe45bbd55afb4ff.mockapi.io/MuseumAsia/psikolog')
-  //     .then(res => {
-  //       setPsikolog(res.data)
-  //       console.log(res.data)
-  //       setIsLoading(false)
-  //     })
-  // }, [])
-
-  // if (isLoading) return(
-  //   <div className="d-flex align-items-center justify-content-center vh-100">
-  //         <img className='img-fluid' src={loading} alt="" />
-  //   </div>
-  // )
-
-  // {profil
-  //       .filter((item) => item.id === id)
-  //   .map((item) => {
-
-
   const { profil, isLoading } = useSelector((state) => state.profil);
 
 
@@ -43,10 +19,8 @@ function Psikolog() {
   }, []);
 
   return (
-    <div className="kontenKomponen">
       <div className="Psikolog mb-3">
         <div className="container d-flex flex-column">
-          {/* {psikolog.map((item, index) => ( */}
           {isLoading ? (
             <div className="d-flex align-items-center justify-content-center vh-100">
               <img className="img-fluid" src={loading} alt="" />
@@ -57,11 +31,11 @@ function Psikolog() {
               return (
                 <div key={item.id} className="card-psikolog mx-auto mt-3 ">
                   <div className="row">
-                    <div className=" col-3 card-img-psikolog ng-danger">
-                      <img className="img-fluid" src={item.avatar} alt="" />
+                    <div className=" col-3 card-img-psikolog">
+                      <img className="img-fluid d-flex align-items-center justify-content-center" src={item.avatar} alt="" />
                     </div>
                     <div className="col-6 card-title-piskolog d-flex flex-column">
-                      <div className="psikolog-name">
+                      <div className="mb-auto mt-3 psikolog-name">
                         <h3>{item.nama}</h3>
                       </div>
                       <div className="psikolog-job">
@@ -76,7 +50,7 @@ function Psikolog() {
                           className="nav-link">
                           <button
                             type="button"
-                            className="btn btn-primary m-auto">
+                            className="btn btn-primary m-auto p-2">
                             Lihat
                           </button>
                         </Link>
@@ -88,7 +62,6 @@ function Psikolog() {
             }))}
         </div>
       </div>
-    </div>
   );
 }
 
