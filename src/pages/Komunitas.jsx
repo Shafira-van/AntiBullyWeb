@@ -97,8 +97,8 @@ function Komunitas() {
                               <h6 className="p-2">{item.provinsi}</h6>
                             </div>
                             <div className="deskripsi-komunitas col-6 d-flex flex-column">
-                              <h6>{item.nama}</h6>
-                              <h5>{item.selogan}</h5>
+                              <h6 className="mt-2"><b>{item.Nama}</b></h6>
+                              <h5><i>"{item.selogan}"</i></h5>
                               <div className="alamat-komunitas mt-auto">
                                 <h5>{item.alamat}</h5>
                               </div>
@@ -122,33 +122,35 @@ function Komunitas() {
                 return (
                   <>
                     <div className="komunitas mb-3">
-                      <div key={item.id} className="card mx-auto mb-3">
-                        <div className="row">
-                          <div className="profil-komunitas col-3 text-center">
-                            <img
-                              className="img-fluid p-2"
-                              src={item.picture}
-                              alt=""
-                            />
-                            <h6 className="p-2">{item.provinsi}</h6>
-                          </div>
-                          <div className="deskripsi-komunitas col-6 d-flex flex-column">
-                            <h6 className="mt-2"><b>{item.nama}</b></h6>
-                            <h5>{item.selogan}</h5>
-                            <div className="alamat-komunitas mt-auto">
-                              <h5>{item.alamat}</h5>
+                        <div key={item.id} className="card mx-auto mb-3">
+                          <div className="row">
+                            <div className="profil-komunitas col-3 text-center">
+                              <img
+                                className="img-fluid p-2"
+                                src={item.picture}
+                                alt=""
+                              />
+                              <h6 className="p-2">{item.provinsi}</h6>
                             </div>
-                          </div>
-                          <div  className="show-komunitas col-3 d-flex align-items-center justify-content-center">
-                            <Link
-                              to={`detailkomunitas/${item.id}`}
-                              className="nav-link">
-                              <button className="btn btn-primary">Lihat</button>
-                            </Link>
+                            <div className="deskripsi-komunitas col-6 d-flex flex-column">
+                              <h6 className="mt-2"><b>{item.Nama}</b></h6>
+                              <h5><i>"{item.selogan}"</i></h5>
+                              <div className="alamat-komunitas mt-auto">
+                                <h5>{item.alamat}</h5>
+                              </div>
+                            </div>
+                            <div className="show-komunitas col-3 d-flex align-items-center justify-content-center">
+                              <Link
+                                to={`detailkomunitas/${item.id}`}
+                                className="nav-link">
+                                <button className="btn btn-primary">
+                                  Lihat
+                                </button>
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </>
                 );
               })}
