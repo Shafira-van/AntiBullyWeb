@@ -17,8 +17,8 @@ import Login from "../components/Login";
 import EditJadwalPraktek from "../components/EditJadwalPraktek";
 import EditJadwalPsikolog from "../pages/EditJadwalPsikolog";
 import NavbarPsikolog from "../pages/NavbarPsikolog";
-import Komunitas from '../pages/Komunitas';
-import DetailKomunitas from '../pages/DetailKomunitas';
+import Komunitas from "../pages/Komunitas";
+import DetailKomunitas from "../pages/DetailKomunitas";
 import OutletKomunitas from "../pages/OutletKomunitas";
 import DetailPsikolog from "../components/DetailPsikolog";
 import OutletPsikolog from "../pages/OutletPsikolog";
@@ -30,7 +30,7 @@ function PsikologAlur() {
       <NavbarPsikolog />
       <Routes>
         {/* <Route path="/komunitas" element={<Komunitas />} /> */}
-        
+
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomePsikolog />} />
         <Route path="/artikel" element={<Artikel />}>

@@ -1,15 +1,21 @@
 .profil-user {
     width: 70%;
 }
+.profilpsikolog table th h6{
+    font-size: 2vw;
+}
 
+.profilpsikolog table td h6 {
+    font-size: 2vw;
+}
 .foto-profil img {
     width: 15vw;
     height: auto;
 }
 
 .icon-desc img {
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 2vw;
 }
 
 .icon-desc {
@@ -56,7 +62,7 @@
 }
 
 #jadwal button {
-    font-size: 13px;
+    font-size: 2vw;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.2vw;
     font-weight: 400;
@@ -68,7 +74,7 @@
 }
 
 #jadwal button:hover {
-    font-size: 13px;
+    font-size:2vw;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.2vw;
     font-weight: 400;

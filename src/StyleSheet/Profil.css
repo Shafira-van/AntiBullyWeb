@@ -6,9 +6,15 @@ komponen profil .profil {
   margin: 1vw 10vw;
   margin-top: 6vw;
 }
-
-
-
+.editprofilpsikolog h2 {
+  font-size: 3vw;
+}
+.editprofilpsikolog h6{
+  font-size: 2.4vw;
+}
+table th h6{
+  font-size: 2vw;
+}
 .isiprofil {
   display: flex;
 }
@@ -228,7 +234,7 @@ tr {
 
 .editprofilpsikolog h2 {
   font-weight: 700;
-  letter-spacing: o.2vw;
+  letter-spacing: 0.2vw;
   
 }
 

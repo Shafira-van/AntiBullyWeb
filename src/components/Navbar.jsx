@@ -96,7 +96,7 @@ function Navbar({ admin, id }) {
               </li>
               <li className="nav-item d-lg-none">
                 <button onClick={logOut}>
-                  <CustomLink to="/" className="nav-link" href="#">
+                  <CustomLink to="/" className="nav-link" >
                   Log Out
                   </CustomLink>
                 </button>
@@ -131,7 +131,7 @@ function Navbar({ admin, id }) {
                     </li>
                     <li>
                       <button onClick={logOut}>
-                        <CustomLink to="/" className="dropdown-item" href="#">
+                        <CustomLink to="/" className="dropdown-item" >
                           Log Out
                         </CustomLink>
                       </button>

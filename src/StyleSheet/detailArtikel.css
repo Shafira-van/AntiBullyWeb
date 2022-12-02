@@ -27,16 +27,16 @@
 .isi-artikel p{
     text-align: justify;
     font-weight: 400;
-    letter-spacing: 0.2vw
+    /* letter-spacing: 0.2vw */
 }
 
 .judul-artikel h3{
     font-weight: 700;
-    letter-spacing: 0.2vw;
+    /* letter-spacing: 0.2vw; */
 }
 
 .isi-artikel{
-    width: 70%;
+    width: 90%;
 }
 
 @media screen and (min-width: 400px) and (max-width: 575px) {

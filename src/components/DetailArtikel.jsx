@@ -40,7 +40,7 @@ function DetailArtikel() {
                       <h3>{el.judul}</h3>
                       <hr />
                     </div>
-                    <div className="isi-artikel mx-auto">
+                    <div className="isi-artikel ">
                       <p dangerouslySetInnerHTML={{ __html: el.isi }}></p>
                     </div>
                   </div>
@@ -51,28 +51,7 @@ function DetailArtikel() {
       )}
     </>
 
-    // <div  className="container kontenKomponen" id="home">
-    //   <img
-    //     src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/beranda.png"
-    //     alt=""
-    //   />
-    //   <div className="header">
-    //     <h1>Our Mission</h1>
-    //     <h2 className="mt-2">
-    //       Your <span>Smile</span> Beautifies The <span>world</span>
-    //     </h2>
-    //     <p className="mt-3">
-    //       Ayo hentikan budaya bully di Indonesia, mari kita bangkit bersama
-    //       bangun Indonesia lebih maju.
-    //     </p>
-    //     <p>
-    //       <i>
-    //         “Beri aku 1000 orang tua, niscaya akan kucabut Sumeru dari akarnya.
-    //         Beri aku 10 pemuda, akan kuguncangan dunia” - Ir.Soekarna
-    //       </i>
-    //     </p>
-    //   </div>
-    // </div>
+    
   );
 }
 
