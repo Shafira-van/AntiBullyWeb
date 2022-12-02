@@ -29,29 +29,31 @@ function DetailPsikolog() {
           .filter((item) => item.id === id)
           .map((item) => {
             return (
-              <div className="container detaiPsikolog mt-3 mb-3">
+              <div className="container detaiPsikolog mt-3 mb-3" key={item.id}>
                 <div className="detail-psikolog row mx-auto">
                   <div className="col-lg-3 col-md-5 col-7 mx-auto">
                     <img className="mt-3 img-fluid" src={item.avatar} alt="" />
                   </div>
                   <div className="psikolog-name col-lg-7 col-md-6 col-12 m-3">
                     <table>
-                      <tr>
-                        <td className="icon-psikolog p-3">
-                          <img src={hospital} alt="" />
-                        </td>
-                        <td className="detail-psikolog ">
-                          <h4>{item.nama}</h4>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="icon-psikolog p-3">
-                          <img src={psikolog} alt="" />
-                        </td>
-                        <td className="detail-psikolog ">
-                          <h6>{item.tempatkerja}</h6>
-                        </td>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <td className="icon-psikolog p-3">
+                            <img src={hospital} alt="" />
+                          </td>
+                          <td className="detail-psikolog ">
+                            <h4>{item.nama}</h4>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="icon-psikolog p-3">
+                            <img src={psikolog} alt="" />
+                          </td>
+                          <td className="detail-psikolog ">
+                            <h6>{item.tempatkerja}</h6>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
                     <div className="text-center mt-3 w-100">
                       <a href={`https://wa.me/628${item.no}`}>
@@ -64,38 +66,66 @@ function DetailPsikolog() {
                   </div>
                   <div className="jadwal-psikolog col-12 mt-3">
                     <table className="jadwal-psikolog w-100">
-                      <tr>
-                        <td></td>
-                        <td><b>Senin</b></td>
-                        <td><b>Selasa</b></td>
-                        <td><b>Rabu</b></td>
-                        <td><b>Kamis</b></td>
-                        <td><b>Jumat</b></td>
-                      </tr>
-                      <tr>
-                        <td><hr /></td>
-                        <td><hr /></td>
-                        <td><hr /></td>
-                        <td><hr /></td>
-                        <td><hr /></td>
-                        <td><hr /></td>
-                      </tr>
-                      <tr>
-                        <td><b>Buka</b></td>
-                        <td>{item.jadwalpraktek.senin.buka}</td>
-                        <td>{item.jadwalpraktek.selasa.buka}</td>
-                        <td>{item.jadwalpraktek.rabu.buka}</td>
-                        <td>{item.jadwalpraktek.kamis.buka}</td>
-                        <td>{item.jadwalpraktek.jumat.buka}</td>
-                      </tr>
-                      <tr>
-                        <td><b>Tutup</b></td>
-                        <td>{item.jadwalpraktek.senin.tutup}</td>
-                        <td>{item.jadwalpraktek.selasa.tutup}</td>
-                        <td>{item.jadwalpraktek.rabu.tutup}</td>
-                        <td>{item.jadwalpraktek.kamis.tutup}</td>
-                        <td>{item.jadwalpraktek.jumat.tutup}</td>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>
+                            <b>Senin</b>
+                          </td>
+                          <td>
+                            <b>Selasa</b>
+                          </td>
+                          <td>
+                            <b>Rabu</b>
+                          </td>
+                          <td>
+                            <b>Kamis</b>
+                          </td>
+                          <td>
+                            <b>Jumat</b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr />
+                          </td>
+                          <td>
+                            <hr />
+                          </td>
+                          <td>
+                            <hr />
+                          </td>
+                          <td>
+                            <hr />
+                          </td>
+                          <td>
+                            <hr />
+                          </td>
+                          <td>
+                            <hr />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <b>Buka</b>
+                          </td>
+                          <td>{item.jadwalpraktek.senin.buka}</td>
+                          <td>{item.jadwalpraktek.selasa.buka}</td>
+                          <td>{item.jadwalpraktek.rabu.buka}</td>
+                          <td>{item.jadwalpraktek.kamis.buka}</td>
+                          <td>{item.jadwalpraktek.jumat.buka}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <b>Tutup</b>
+                          </td>
+                          <td>{item.jadwalpraktek.senin.tutup}</td>
+                          <td>{item.jadwalpraktek.selasa.tutup}</td>
+                          <td>{item.jadwalpraktek.rabu.tutup}</td>
+                          <td>{item.jadwalpraktek.kamis.tutup}</td>
+                          <td>{item.jadwalpraktek.jumat.tutup}</td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>

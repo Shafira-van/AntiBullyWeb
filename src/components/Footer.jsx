@@ -37,29 +37,29 @@ function Footer() {
           </div>
           <div className="col-lg-4 col-md-4 col-sm-6 col-6 mt-4" id="col3">
             <h1>Find Us at</h1>
-            <ul className="mt-2">
-              <li className="mt-2">
+            <ul className="">
+              <li className="">
                 <img
                   src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/ig%20putih.png"
                   alt=""
                 />
                 <h2>@antibully_</h2>
               </li>
-              <li  className="mt-3">
+              <li  className="">
                 <img
                   src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/twitter%20putih.png"
                   alt=""
                 />
                 <h2>antibullyID</h2>
               </li>
-              <li  className="mt-3">
+              <li  className="">
                 <img
                   src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/fb%20putih.png"
                   alt=""
                 />
                 <h2>anti-bully</h2>
               </li>
-              <li  className="mt-3">
+              <li  className="">
                 <img
                   src="https://github.com/Shafira-van/file/raw/main/AntiBully/img/telp%20putih.png"
                   alt=""

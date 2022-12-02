@@ -120,9 +120,9 @@ function Komunitas() {
                 })
             : user.map((item) => {
                 return (
-                  <>
-                    <div className="komunitas mb-3">
-                      <div key={item.id} className="card mx-auto mb-3">
+                  <div key={item.id} >
+                    <div className="komunitas mb-3" >
+                      <div className="card mx-auto mb-3">
                         <div className="row">
                           <div className="profil-komunitas col-3 text-center">
                             <img
@@ -149,7 +149,7 @@ function Komunitas() {
                         </div>
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
         </div>

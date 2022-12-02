@@ -1,11 +1,10 @@
-import { Link, Outlet, useMatch, useResolvedPath } from "react-router-dom";
-import React, { useState } from "react";
+import { Link, Outlet} from "react-router-dom";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getArtikel } from "../redux/action/artikelAction";
-import DetailArtikel from "./DetailArtikel";
+
 import loading from "../Asset/homePage/login.gif";
-// import { specialCharMap } from "@testing-library/user-event/dist/keyboard";
 
 function Artikel() {
   const dispatch = useDispatch();
@@ -30,8 +29,8 @@ function Artikel() {
                 return (
                   <Link
                     to={`detailartikel/${item.id}/${item.judul}`}
-                    className="nav-link">
-                    <div className="col" key={item.id}>
+                    className="nav-link" key={item.id}>
+                    <div className="col" >
                       <button>
                         <img src={item.img} alt="" />
                         <p>{item.judul}</p>
@@ -48,9 +47,9 @@ function Artikel() {
                 return (
                   <Link
                     to={`detailartikel/${item.id}/${item.judul}`}
-                    className="nav-link"
+                    className="nav-link" key={item.id}
                     href="#">
-                    <div className="col" key={item.id}>
+                    <div className="col" >
                       <button>
                         <img src={item.img} alt="" />
                         <p>{item.judul}</p>

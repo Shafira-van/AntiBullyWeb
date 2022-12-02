@@ -1,6 +1,12 @@
-.img-nav img {
+.navbarHome .container nav{
+  display: flex;
+  justify-content: space-between;
+  /* height: 6vw; */
+}
+.navbarHome .container img{
     width: 1.5em;
     height: 1.5em;
+    /* justify-self: flex-start; */
   }
 
 .btn-login button{
@@ -8,5 +14,6 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 13px;
+    justify-self: flex-end;
     border: none;
 }

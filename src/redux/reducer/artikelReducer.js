@@ -16,7 +16,6 @@ const artikelReducer = (state = initialState, action) => {
         isLoading: true
       }
     case SUCCESS_GET_ARTIKEL:
-      console.log(action.payload)
       return {
         ...state,
         article: action.payload,

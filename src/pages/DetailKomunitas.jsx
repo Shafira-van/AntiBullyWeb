@@ -7,7 +7,7 @@ import facebook from "../Asset/detailkomunitas/facebook.png";
 import instagram from "../Asset/detailkomunitas/instagram.png";
 import phone from "../Asset/detailkomunitas/phone.png";
 import twitter from "../Asset/detailkomunitas/twitter.png";
-import "../App.css"
+import "../App.css";
 
 function DetailKomunitas() {
   let { id } = useParams();
@@ -36,8 +36,8 @@ function DetailKomunitas() {
         .filter((item) => item.id === id)
         .map((item) => {
           return (
-            <div>
-              <div className="detail-komunitas" key={item.id}>
+            <div key={item.id}>
+              <div className="detail-komunitas">
                 <div className="card mx-auto mb-3 p-3">
                   <div className="row">
                     <div className="profil-komunitas col-3 text-center">
@@ -63,49 +63,50 @@ function DetailKomunitas() {
                     <div className="contact-komunitas col-4 px-2">
                       <h2>Hubungi Kami</h2>
                       <table className="table">
-                        <tr>
-                          <th scope="row"></th>
-                          <td className="text-center">
-                            <img className="icon-detail" src={phone} alt="" />
-                          </td>
-                          <td className="desc-icon">Thornton</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td className="text-center">
-                            <img className="icon-detail" src={wa} alt="" />
-                          </td>
-                          <td className="desc-icon">Thornton</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td className="text-center">
-                            <img
-                              className="icon-detail"
-                              src={instagram}
-                              alt=""
-                            />
-                          </td>
-                          <td className="desc-icon">Thornton</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td className="text-center">
-                            <img
-                              className="icon-detail"
-                              src={facebook}
-                              alt=""
-                            />
-                          </td>
-                          <td className="desc-icon">Thornton</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td className="text-center">
-                            <img className="icon-detail" src={twitter} alt="" />
-                          </td>
-                          <td className="desc-icon">Thornton</td>
-                        </tr>
+                        <tbody>
+                          <tr>
+                            <td className="text-center">
+                              <img className="icon-detail" src={phone} alt="" />
+                            </td>
+                            <td className="desc-icon">Thornton</td>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <img className="icon-detail" src={wa} alt="" />
+                            </td>
+                            <td className="desc-icon">Thornton</td>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <img
+                                className="icon-detail"
+                                src={instagram}
+                                alt=""
+                              />
+                            </td>
+                            <td className="desc-icon">Thornton</td>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <img
+                                className="icon-detail"
+                                src={facebook}
+                                alt=""
+                              />
+                            </td>
+                            <td className="desc-icon">Thornton</td>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <img
+                                className="icon-detail"
+                                src={twitter}
+                                alt=""
+                              />
+                            </td>
+                            <td className="desc-icon">Thornton</td>
+                          </tr>
+                        </tbody>
                       </table>
                     </div>
                     <div className="desc-komunitas col-8">

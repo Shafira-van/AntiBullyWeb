@@ -494,7 +494,7 @@ font-family: 'Poppins', sans-serif; */
 
 /* footer */
 .footer {
-  padding: 1vw 2vw 1vw 2vw;
+  padding: 1vw 2vw 0vw 2vw;
   background-color: #1366c3;
   opacity: 0.8;
   color: white;

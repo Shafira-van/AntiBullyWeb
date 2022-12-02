@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import HomeUser from "../pages/HomeUser";
 import ArtikelUser from "../pages/ArtikelUser";
 import DetailArtikel from "../components/DetailArtikel";
@@ -24,6 +24,7 @@ function User() {
   return (
     <div className="kontenKomponen">
       <NavbarUser />
+      {/* <p>hai</p> */}
       <Routes>
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomeUser />} />

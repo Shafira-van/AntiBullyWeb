@@ -16,27 +16,6 @@ function DetailArtikel() {
   }, []);
 
   return (
-    // <div className="kontenKomponen">
-    //   {isLoading ? (
-    //     <div className="d-flex align-items-center justify-content-center vh-100">
-    //       <img className="img-fluid" src={loading} alt="" />
-    //     </div>
-    //   ) : (
-    //     article
-    //       .filter((el) => el.id === id)
-    //       .map((el) => {
-    //         return (
-    //           <div className="detailArtikel" key={el.id}>
-    //             <div className="judulArtikel">
-    //               <img src={el.img} />
-    //               <h1>{el.judul}</h1>
-    //             </div>
-    //             <p dangerouslySetInnerHTML={{ __html: el.isi }}></p>
-    //           </div>
-    //         );
-    //       })
-    //   )}
-    // </div>
 
     <>
       {isLoading ? (
@@ -48,7 +27,7 @@ function DetailArtikel() {
           .filter((el) => el.id === id)
           .map((el) => {
             return(
-              <div className="container detail-artikel">
+              <div className="container detail-artikel" key={el.id}>
                 <div className="row">
                   <div className="col-5 text-center d-flex justify-content-center mx-auto">
                     <div className="mx-auto">

@@ -22,6 +22,7 @@ function EditProfilUser() {
         .map((profil) => {
           return (
             <EditProfil
+              key={profil.id}
               id={profil.id}
               img={profil.avatar}
               nama={profil.nama}
@@ -31,6 +32,7 @@ function EditProfilUser() {
               alamat={profil.alamat}
               gender={profil.gender}
               status={profil.status}
+              deskripsi={profil.deskripsi}
             />
           );
         })}

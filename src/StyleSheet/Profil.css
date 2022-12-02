@@ -5,16 +5,9 @@ komponen profil .profil {
   flex-direction: column;
   margin: 1vw 10vw;
   margin-top: 6vw;
-  /* padding-bottom: 2vw; */
-  /* border-bottom: #1366c3 1px solid; */
 }
 
-/* .profil h1 {
-  font-size: 3vw;
-} */
-/* .textProfil h2 {
-  font-size: 1vw;
-} */
+
 
 .isiprofil {
   display: flex;
@@ -39,7 +32,7 @@ komponen profil .profil {
 }
 
 .isiprofil img {
-  width: 20vw;
+  width: 30vw;
   height: 23vw;
   object-fit: cover;
   border: 1px solid #1366c3;
@@ -234,9 +227,6 @@ tr {
 }
 
 .editprofilpsikolog h2 {
-  /* font-size: 3.6vw;
-  margin-top: 2vw;
-  color: #1366c3; */
   font-weight: 700;
   letter-spacing: o.2vw;
   
@@ -341,4 +331,8 @@ tr {
 
 .ckeditprofil .ck.ck-toolbar .ck.ck-toolbar__separator {
   background-color: #1366c3;
+}
+
+.ckeditprofil label{
+  margin-left: 1vw;
 }
