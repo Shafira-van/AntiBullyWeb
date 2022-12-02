@@ -1,12 +1,56 @@
 .img-nav img {
-    width: 1.5em;
-    height: 1.5em;
-  }
+  width: 1.5em;
+  height: 1.5em;
+}
 
-.btn-login button{
-    background-color: #1366C3;
+.btn-login button {
+  background-color: #1366C3;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  border: none;
+}
+
+.img-nav button {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2vw;
+  font-weight: 400;
+  background-color: #1366C3;
+  border-radius: 0;
+  border-color: #1366C3;
+}
+
+.img-nav button:hover {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2vw;
+  font-weight: 400;
+  color: #1366C3;
+  background-color: white;
+  border-radius: 0;
+  border-color: #1366C3;
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .img-nav button {
+    font-size: 8px;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
     font-weight: 400;
-    font-size: 13px;
-    border: none;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+  }
+  
+  .img-nav button:hover {
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+  }
 }
