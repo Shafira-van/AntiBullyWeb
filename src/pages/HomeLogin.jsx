@@ -21,12 +21,15 @@ function HomeLogin() {
                 alt=""
               />
             </a>
-          </div>
-          <div className="btn-login">
             <Link to={`/login`}>
               <button class="btn btn-primary">Masuk</button>
             </Link>
           </div>
+          {/* <div className="btn-login">
+            <Link to={`/login`}>
+              <button class="btn btn-primary">Masuk</button>
+            </Link>
+          </div> */}
         </nav>
       </div>
       {/* End Navbar */}

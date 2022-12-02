@@ -79,6 +79,20 @@
     font-size: 1vw;
 }
 
+.contact-komunitas h2{
+    letter-spacing: 0.1vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #1366C3;
+}
+
+.desc-komunitas h4{
+    letter-spacing: 0.1vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #1366C3;
+}
+
 @media screen and (min-width: 400px) and (max-width: 767px) {
     .deskripsi-komunitas h6 {
         font-family: 'Poppins', sans-serif;
@@ -105,5 +119,52 @@
         letter-spacing: 0.1vw;
         font-size: 1.5vw;
         color: #1366c3;
+    }
+    .icon-detail {
+        width: 30px;
+        height: auto;
+      }
+
+    .contact-komunitas table{
+        width: 60%;
+        margin: auto;
+    }
+
+    .contact-komunitas h2{
+        text-align: center;
+        letter-spacing: 0.1vw;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #1366C3;
+    }
+
+    .desc-komunitas h4{
+        text-align: center;
+        letter-spacing: 0.1vw;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #1366C3;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-komunitas h2{
+        text-align: center;
+        letter-spacing: 0.1vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #1366C3;
+    }
+
+    .desc-komunitas h4{
+        text-align: center;
+        letter-spacing: 0.1vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #1366C3;
+        margin-top: 10px;
     }
 }
