@@ -55,3 +55,31 @@
     border-color: #1366C3;
     border-style: solid;
 }
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+    .show-komunitas button{
+        background-color: #1366C3;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2vw;
+        border: none;
+        letter-spacing: 0.2vw;
+        border-radius: 0px;
+        color: white;
+    }
+
+    .show-komunitas button:hover{
+        background-color: white;
+        color: #1366C3;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2vw;
+        border: none;
+        letter-spacing: 0.2vw;
+        border-radius: 0px;
+        border-color: #1366C3;
+        border-style: solid;
+    }
+}

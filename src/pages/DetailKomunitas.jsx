@@ -60,7 +60,7 @@ function DetailKomunitas() {
                 {/* deskripsi komunitas */}
                 <div className="container">
                   <div className="row">
-                    <div className="contact-komunitas col-4 px-2">
+                    <div className="contact-komunitas col-lg-4 col-12 px-2 mx-auto">
                       <h2>Hubungi Kami</h2>
                       <table className="table">
                         <tbody>
@@ -109,16 +109,9 @@ function DetailKomunitas() {
                         </tbody>
                       </table>
                     </div>
-                    <div className="desc-komunitas col-8">
+                    <div className="desc-komunitas col-lg-8 col-8 mx-auto">
+                      <h4>Visi Misi</h4>
                       <p>{item.deskrisi}</p>
-                      <h4>Visi dan Misi</h4>
-                      <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Culpa consequuntur nulla illum eius sequi
-                        excepturi vero eum! Fugit omnis expedita dolores laborum
-                        tempore vero consectetur molestiae veritatis incidunt,
-                        doloremque autem.
-                      </p>
                     </div>
                   </div>
                 </div>

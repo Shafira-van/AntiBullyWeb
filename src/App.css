@@ -105,21 +105,18 @@ font-family: 'Poppins', sans-serif; */
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2vw;
-  
+
   /* font-weight: 500; */
 }
 
 #home .kontenHome button {
-  align-self: center;
-  width: 18vw;
-  font-weight: 600;
-  background-color: #1366c3;
-  border-color: #1366c3;
-  color: white;
-  border-radius: 5px;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2vw;
-  /* padding: 1vw 0vw; */
-  margin: 1vw 0vw;
+  font-weight: 400;
+  background-color: #1366C3;
+  border-radius: 0;
+  border-color: #1366C3;
 }
 
 #home .kontenHome a {
@@ -127,27 +124,14 @@ font-family: 'Poppins', sans-serif; */
 }
 
 #home .kontenHome button:hover {
-  /* background-color: #136fd7; */
-  /* text-align: center;
-  text-decoration: none;
-  color: #1366C3;
-  background-color: white;
-  padding: 10px;
-  margin-top: 10px;
-  border-style: solid;
-  border-color:#1366C3 ; */
-
-  align-self: center;
-  width: 18vw;
-  font-weight: 600;
-  background-color: white;
-  color: #1366C3;
-  border-style: solid;
-  border-color:#1366C3 !important;
-  border-radius: 5px;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2vw;
-  /* padding: 1vw 0vw; */
-  margin: 1vw 0vw;
+  font-weight: 400;
+  color: #1366C3;
+  background-color: white;
+  border-radius: 0;
+  border-color: #1366C3;
 }
 
 #home .kontenHome img {
@@ -191,30 +175,24 @@ font-family: 'Poppins', sans-serif; */
 }
 
 #home .container button {
-  align-self: center;
-  width: 18vw;
-  font-weight: 600;
-  background-color: #1366c3;
-  color: white;
-  border-color: #1366C3;
-  border-radius: 5px;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2vw;
-  /* padding: 1vw 0vw; */
-  margin: 1vw 0vw;
+  font-weight: 400;
+  background-color: #1366C3;
+  border-radius: 0;
+  border-color: #1366C3;
 }
 
 #home .container button:hover {
-  align-self: center;
-  width: 18vw;
-  font-weight: 600;
-  background-color: white;
-  color: #1366C3;
-  border-style: solid;
-  border-color:#1366C3 !important;
-  border-radius: 5px;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2vw;
-  /* padding: 1vw 0vw; */
-  margin: 1vw 0vw;
+  font-weight: 400;
+  color: #1366C3;
+  background-color: white;
+  border-radius: 0;
+  border-color: #1366C3;
 }
 
 /* artikel */
@@ -357,7 +335,7 @@ font-family: 'Poppins', sans-serif; */
 
 /* add artikel */
 /* .kontenKomponen button{ */
-  /* height: 4vw;
+/* height: 4vw;
   margin: 2vw 6vw;
   padding: 0 0.6vw;
   font-weight: 600;
@@ -366,15 +344,15 @@ font-family: 'Poppins', sans-serif; */
   color: white;
   border: 0;
   border-radius: 0.4vw; */
-  /* font-size: 13px;
+/* font-size: 13px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.2vw;
     font-weight: 400;
     /* background-color: #1366C3; */
-    /* border-radius: 0; */
-    /* border-color: #1366C3; */
-    /* padding: 5px; */
-    /* color: #1366C3; */ 
+/* border-radius: 0; */
+/* border-color: #1366C3; */
+/* padding: 5px; */
+/* color: #1366C3; */
 /* } */
 
 /* .kontenKomponen button:hover{
@@ -523,17 +501,16 @@ font-family: 'Poppins', sans-serif; */
 } */
 
 .footer .textFooter h2 {
-  padding: 0.4vw;
-  font-size: 13px;
+  font-size: 1.2vw;
   font-weight: 400;
-  line-height: 30px;
+  letter-spacing: 0.2vw;
 }
 
-.footer #col2 {
+/* .footer #col2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .footer #col2 h1 {
   font-size: 25px;
@@ -550,16 +527,15 @@ font-family: 'Poppins', sans-serif; */
 
 .footer .fiturFooter ul li {
   padding: 0.4vw;
-  font-size: 15px;
+  font-size: 1.5vw;
   font-weight: 400;
-  line-height: 30px;
 }
 
-.footer #col3 {
+/* .footer #col3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .footer #col3 h1 {
   font-size: 25px;
@@ -645,4 +621,70 @@ font-family: 'Poppins', sans-serif; */
     font-size: 3vw;
 
   }
+}
+
+@media screen and (max-width: 767px) and (min-width: 400px) {
+  #home .kontenHome button:hover {
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+  }
+
+  #home .kontenHome button {
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+  }
+
+  #home .container button {
+    font-size: 7px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+    color: white !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #home .container button:hover {
+    font-size: 7px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer .textFooter h2 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: 0.2vw;
+  }
+
+  .footer .logoFooter h1 {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+
+  .footer #col2 h1 {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+
+  
 }
