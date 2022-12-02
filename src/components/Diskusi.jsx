@@ -13,13 +13,7 @@ function Diskusi() {
     title: "Anti-Bully",
   };
   
-  // // console.log("data");
-  // setTimeout(() => {
-  //   setIsLoading(false)
-  //   // console.log("data")
-  // }, 1000);
 
-  // setIsLoading(true)
 
   
 

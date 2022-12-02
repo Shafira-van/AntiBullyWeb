@@ -35,6 +35,7 @@
     font-weight: 400;
     text-align: center;
     color: #1366c3;
+    font-size: 2.2vw;
 }
 
 .card {
@@ -44,14 +45,14 @@
 .deskripsi-komunitas h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 2vw;
     letter-spacing: 0.1vw;
 }
 
 .deskripsi-komunitas h5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
     letter-spacing: 0.1vw;
 }
 
@@ -93,20 +94,22 @@
     color: #1366C3;
 }
 
-@media screen and (min-width: 400px) and (max-width: 767px) {
-    .deskripsi-komunitas h6 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.1vw;
-    }
+@media screen and (min-width: 300px) and (max-width: 767px) {
 
-    .deskripsi-komunitas h5 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.1vw;
-        font-size: 1.5vw;
-    }
+        .deskripsi-komunitas h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 3vw;
+            letter-spacing: 0.1vw;
+        }
+    
+        .deskripsi-komunitas h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 3vw;
+            letter-spacing: 0.1vw;
+        }
+
 
     .profil-komunitas img {
         width: 70%;
@@ -117,7 +120,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         letter-spacing: 0.1vw;
-        font-size: 1.5vw;
+        font-size: 2vw;
         color: #1366c3;
     }
     .icon-detail {

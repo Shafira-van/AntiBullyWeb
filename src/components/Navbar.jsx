@@ -14,6 +14,11 @@ function Navbar({ admin, id }) {
     dispatch(getProfil());
   }, []);
 
+  const logOut = () => {
+    localStorage.setItem("isAuthenticated", "false");
+  };
+
+
   return (
     <>
       <nav className="container navbar navbar-expand-lg bg-transparent p-3">
@@ -90,9 +95,11 @@ function Navbar({ admin, id }) {
                 </CustomLink>
               </li>
               <li className="nav-item d-lg-none">
-                <CustomLink to="/" className="nav-link" href="#">
+                <button onClick={logOut}>
+                  <CustomLink to="/" className="nav-link" >
                   Log Out
-                </CustomLink>
+                  </CustomLink>
+                </button>
               </li>
             </ul>
           </div>
@@ -100,17 +107,14 @@ function Navbar({ admin, id }) {
             .filter((item) => item.id === id)
             .map((item) => {
               return (
-                <div className="profil dropdown Account d-none d-lg-block">
+                <div className="profil dropdown Account d-none d-lg-block" key={id}>
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <img
-                      src={item.avatar}
-                      alt=""
-                    />
+                    <img src={item.avatar} alt="" />
                     {item.nama}
                   </a>
                   <ul className="dropdown-menu">
@@ -126,9 +130,11 @@ function Navbar({ admin, id }) {
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <Link to="/" className="dropdown-item" href="#">
-                        Log Out
-                      </Link>
+                      <button onClick={logOut}>
+                        <CustomLink to="/" className="dropdown-item" >
+                          Log Out
+                        </CustomLink>
+                      </button>
                     </li>
                   </ul>
                 </div>

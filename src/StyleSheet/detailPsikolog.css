@@ -1,5 +1,6 @@
 .detail-psikolog {
     width: 70%;
+    margin: 4vw 0vw;
 }
 
 .icon-psikolog img{
@@ -10,16 +11,18 @@
 .detail-psikolog h4{
     text-align: left;
     font-weight: 600;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0vw;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .detail-psikolog h6{
     text-align: left;
     font-weight: 400;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0vw;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 .psikolog-name table{
@@ -52,7 +55,7 @@
 
 .deskripsi-psikolog p{
     font-size: 13px;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0vw;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: justify;

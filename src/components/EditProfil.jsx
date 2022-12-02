@@ -58,7 +58,7 @@ function EditProfil({
     setEditDeskripsi("");
     // setEditStatus("");
 
-    // console.log(img)
+    console.log(editDeskripsi);
   };
 
   return (
@@ -101,13 +101,13 @@ function EditProfil({
               />
               <label htmlFor="floatingInputValue">Email</label>
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">
+            <div className="input-group mb-3">
+              <span className="input-group-text" id="basic-addon1">
                 +62
               </span>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -115,17 +115,6 @@ function EditProfil({
                 onChange={(e) => setEditNo(e.target.value)}
               />
             </div>
-            {/* <div className="form-floating ">
-              <input
-                type="text"
-                className="form-control"
-                id="floatingInputValue"
-                placeholder="No Handphone"
-                value={editNo}
-                onChange={(e) => setEditNo(e.target.value)}
-              />
-              <label htmlFor="floatingInputValue">No Handphone</label>
-            </div> */}
             <div className="form-floating ">
               <input
                 type="text"
@@ -163,31 +152,24 @@ function EditProfil({
             </div>
 
             <div className="ckeditprofil">
+              <label disabled>Deskripsi</label>
               <CKEditor
-                style={{
-                  width: "80vw",
-                }}
                 editor={ClassicEditor}
                 data={editDeskripsi}
                 onReady={(editor) => {
-                  // You can store the "editor" and use when it is needed.
-                  // console.log("Editor is ready to use!", editor);
                 }}
                 onChange={(event, editor) => {
                   const data = editor.getData();
                   setEditDeskripsi(data);
                 }}
                 onBlur={(event, editor) => {
-                  // console.log("Blur.", editor);
                 }}
                 onFocus={(event, editor) => {
-                  // console.log("Focus.", editor);
                 }}
               />
             </div>
           </div>
         </div>
-
         <div className="editprofiluser">
           <button>Simpan</button>
         </div>

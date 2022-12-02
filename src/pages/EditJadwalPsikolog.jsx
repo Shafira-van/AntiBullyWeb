@@ -22,7 +22,8 @@ function EditJadwalPsikolog() {
         .map((item) => {
 
           return (
-              <EditJadwalPraktek
+            <EditJadwalPraktek
+              key={item.id}
                 id={item.id}
                 senin={item.jadwalpraktek.senin}
                 selasa={item.jadwalpraktek.selasa}

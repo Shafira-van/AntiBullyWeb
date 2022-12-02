@@ -6,24 +6,25 @@ import Home from "../components/Home";
 import Navbar from "../components/Navbar";
 
 function HomeLogin() {
+  
   function activateLasers() {
-    alert("silahkan Login Terlebuh dahulu");
+    alert("silahkan Login Terlebih dahulu")
   }
+
+  
   return (
-    <div>
+    <div className="navbarHome">
       {/* Navbar */}
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-transparent ">
-          <div class="img-nav container-fluid">
-            <a className="navbar-brand" href="#">
-              <img
-                src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/LOGO.png"
-                alt=""
-              />
-            </a>
-            <Link to={`/login`}>
-              <button class="btn btn-primary">Masuk</button>
-            </Link>
+      <div className="container">
+        <nav className="navbar navbar-expand-lg bg-transparent ">
+            <img
+              src="https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/LOGO.png"
+              alt=""
+            />
+          <div className="btn-login">
+          <Link to={`/login`}>
+                <button className="btn btn-primary">Masuk</button>
+          </Link>
           </div>
           {/* <div className="btn-login">
             <Link to={`/login`}>

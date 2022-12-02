@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 function Home({ admin, id }) {
+  
   return (
     <div className="kontenKomponen" id="home">
       <img

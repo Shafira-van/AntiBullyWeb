@@ -7,7 +7,7 @@ import facebook from "../Asset/detailkomunitas/facebook.png";
 import instagram from "../Asset/detailkomunitas/instagram.png";
 import phone from "../Asset/detailkomunitas/phone.png";
 import twitter from "../Asset/detailkomunitas/twitter.png";
-import "../App.css"
+import "../App.css";
 
 function DetailKomunitas() {
   let { id } = useParams();
@@ -35,6 +35,7 @@ function DetailKomunitas() {
       {user
         .filter((item) => item.id === id)
         .map((item) => {
+          {console.log(item.Sosialmedia)}
           return (
             <div>
               <div className="detail-komunitas" key={item.id}>
@@ -64,21 +65,25 @@ function DetailKomunitas() {
                       <h2>Hubungi Kami</h2>
                       <table className="table">
                         <tr>
-                          <th scope="row"></th>
+                          <td scope="row"></td>
                           <td className="text-center">
                             <img className="icon-detail" src={phone} alt="" />
                           </td>
-                          <td className="desc-icon">Thornton</td>
+                          <td className="desc-icon">
+                            {item.sosialMedia.phone}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row"></th>
+                          <td scope="row"></td>
                           <td className="text-center">
                             <img className="icon-detail" src={wa} alt="" />
                           </td>
-                          <td className="desc-icon">Thornton</td>
+                          <td className="desc-icon">
+                            {item.sosialMedia.phone}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row"></th>
+                          <td scope="row"></td>
                           <td className="text-center">
                             <img
                               className="icon-detail"
@@ -86,10 +91,10 @@ function DetailKomunitas() {
                               alt=""
                             />
                           </td>
-                          <td className="desc-icon">Thornton</td>
+                          <td className="desc-icon">{item.sosialMedia.ig}</td>
                         </tr>
                         <tr>
-                          <th scope="row"></th>
+                          <td scope="row"></td>
                           <td className="text-center">
                             <img
                               className="icon-detail"
@@ -97,14 +102,18 @@ function DetailKomunitas() {
                               alt=""
                             />
                           </td>
-                          <td className="desc-icon">Thornton</td>
+                          <td className="desc-icon">
+                            {item.sosialMedia.facebook}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row"></th>
+                          <td scope="row"></td>
                           <td className="text-center">
                             <img className="icon-detail" src={twitter} alt="" />
                           </td>
-                          <td className="desc-icon">Thornton</td>
+                          <td className="desc-icon">
+                            {item.sosialMedia.Web}
+                          </td>
                         </tr>
                       </table>
                     </div>

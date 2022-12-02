@@ -17,8 +17,8 @@ import Login from "../components/Login";
 import EditJadwalPraktek from "../components/EditJadwalPraktek";
 import EditJadwalPsikolog from "../pages/EditJadwalPsikolog";
 import NavbarPsikolog from "../pages/NavbarPsikolog";
-import Komunitas from '../pages/Komunitas';
-import DetailKomunitas from '../pages/DetailKomunitas';
+import Komunitas from "../pages/Komunitas";
+import DetailKomunitas from "../pages/DetailKomunitas";
 import OutletKomunitas from "../pages/OutletKomunitas";
 import DetailPsikolog from "../components/DetailPsikolog";
 import OutletPsikolog from "../pages/OutletPsikolog";
@@ -29,18 +29,18 @@ function PsikologAlur() {
     <div className="kontenKomponen">
       <NavbarPsikolog />
       <Routes>
-        <Route path="/komunitas" element={<Komunitas />} />
-        <Route path="/komunitas" element={<OutletKomunitas />}>
-          <Route index element={<Komunitas />} />
-          <Route path="detailkomunitas/:id" element={<DetailKomunitas />} />
-          
-        </Route>
+        {/* <Route path="/komunitas" element={<Komunitas />} /> */}
+
         {/* <Route path="/userlogin" element={<Login />} /> */}
         <Route path="/" element={<HomePsikolog />} />
         <Route path="/artikel" element={<Artikel />}>
           <Route index element={<ArtikelPsikolog />} />
           <Route path="addartikel" element={<AddArtikelPsikolog />} />
           <Route path="detailartikel/:id/:judul" element={<DetailArtikel />} />
+        </Route>
+        <Route path="/komunitas" element={<OutletKomunitas />}>
+          <Route index element={<Komunitas />} />
+          <Route path="detailkomunitas/:id" element={<DetailKomunitas />} />
         </Route>
         {/* <Route path="/komunitas" element={} /> */}
         <Route path="/diskusi" element={<Diskusi />} />

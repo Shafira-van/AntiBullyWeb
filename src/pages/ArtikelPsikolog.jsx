@@ -11,7 +11,7 @@ function ArtikelPsikolog() {
   return (
     <div className="add-Artikel container kontenKomponen mt-3">
       <Link to={`addartikel`}>
-        <button class="btn btn-primary">Add Artikel</button>
+        <button className="btn btn-primary">Add Artikel</button>
       </Link>
       <Artikel />
     </div>

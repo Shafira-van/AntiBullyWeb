@@ -21,7 +21,7 @@ function EditProfilPsikolog() {
         .filter((item) => item.id === id)
         .map((item) => {
           return (
-            <>
+            <div key={item.id}>
               <EditProfil
                 id={item.id}
                 img={item.avatar}
@@ -34,7 +34,7 @@ function EditProfilPsikolog() {
                 status={item.status}
                 deskripsi={item.deskripsi}
               />
-            </>
+            </div>
           );
         })}
     </div>

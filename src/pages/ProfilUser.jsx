@@ -5,11 +5,10 @@ import { getProfil, getProfilId } from "../redux/action/profilAction";
 import { useParams } from "react-router-dom";
 
 function ProfilUser() {
+  const dispatch = useDispatch();
   const { profil } = useSelector((state) => state.profil);
   let { id } = useParams();
-
-  console.log(profil)
-  const dispatch = useDispatch();
+  
 
   useEffect(() => {
     dispatch(getProfil());
@@ -22,6 +21,7 @@ function ProfilUser() {
         .map((profil) => {
           return (
             <Profil
+              key={profil.id}
               id={profil.id}
               img={profil.avatar}
               nama={profil.nama}
@@ -31,6 +31,7 @@ function ProfilUser() {
               alamat={profil.alamat}
               gender={profil.gender}
               status={profil.status}
+              deskripsi={profil.deskripsi}
             />
           );
         })}

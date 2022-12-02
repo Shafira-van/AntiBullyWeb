@@ -22,8 +22,9 @@ function ProfilPsikolog() {
         .filter((item) => item.id === id)
         .map((item) => {
         return (
-          <>
+          <div key={item.id}>
             <Profil
+              
               id={item.id}
               img={item.avatar}
               nama={item.nama}
@@ -44,7 +45,7 @@ function ProfilPsikolog() {
               kamis={item.jadwalpraktek.kamis}
               jumat={item.jadwalpraktek.jumat}
             />
-          </>
+          </div>
         );
       })}
     </div>
